@@ -10,9 +10,16 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css" rel="stylesheet">
+
     <title>ORA PMS</title>
 
     <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+        }
         @font-face {
         font-family: 'Inter'; /* Name your font family */
          src: url('Fonts\Inter-VariableFont_opsz,wght.ttf'); /* Locate the .ttf file within your directory*/
@@ -23,14 +30,36 @@
 </head>
 <body style="background-color:#F1FAEE; font-family:Inter">
     <header id = "header" class="fixed-top" style="max-width: 85%; position: relative; left: 15%;">
-        <div class = "row flex-row" style="border-bottom: 2px solid rgba(29, 53, 87, 0.3);  margin: 0px; ">
-        <div class="col-md-2">hello</div>
-        <div class="col-md-8">date</div>
-        <div class="col-md-2">user</div>
-        </div>
-        
+            <div class="container mw-100" >
+                <div class=" row align-items-center position-relative" style="border-bottom: 2px solid rgba(29, 53, 87, 0.3);padding: 5px 0; height: 80px;">
+                    <div class="col-md-4 ">
+                        <span style="font-size: 16px;">
+                            <a href="/">Home </a> / 
+                            <a class="active">Dashboard</a>
+
+                        </span>
+                      
+                    </div>
+                
+                    <div class="col-md-4 text-center d-flex justify-content-center align-items-center">
+                        <span style="font-size: 30px; font-weight: bold;">3:42
+                            <sup style="font-size: 16px;">PM
+                            </sup>
+                        </span>
+                        <div class="mx-3">
+                            <span style="font-size: 16px;" class="d-block">Saturday</span>
+                            <span style="font-size: 16px;" class="d-block">10 August 2024</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4 d-flex justify-content-end">
+                        <i class="bi bi-info-circle-fill" style="font-size: 24px; margin-right: 15px;"></i>
+                        <i class="bi bi-question-circle-fill" style="font-size: 24px; margin-right: 15px;"></i>
+                        <i class="bi bi-person-fill" style="font-size: 24px; margin-right: 15px;"></i>
+                    </div>
+                </div>
+            </div>
     </header>
-    <div class="sidebar h-100 fixed-top" style="border: 1px; border-style: solid; max-width: 15%; background-color: #1D3557;">
+    <div class="sidebar h-100 fixed-top" style="border: 1px; border-style: solid; max-width: 15%; background-color: #1D3557;overflow: hidden;">
         <ul>
             <li>
                 hello
