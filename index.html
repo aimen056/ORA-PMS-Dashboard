@@ -19,11 +19,9 @@
 
     <title>ORA PMS</title>
 </head>
-<body style="background-color:#F1FAEE; font-family: 'Inter'; font-size: 1rem;">
+<body style="background-color:#F1FAEE;; font-family: 'Inter', sans-serif; font-size: 1rem;">
     <div class="d-flex">
-        <aside id="sidebar" class="sidebar-toggle" style="background-color: #1D3557; width: 286px; height: 100vh;">
-            <nav style="height: 100vh;  background-color: #1D3557; position: fixed; left: 0; top: 0; overflow-x: hidden; padding-top: 20px; display: flex; flex-direction: column; justify-content: space-between;">
-   
+        <aside id="sidebar" class="sidebar-toggle" style="width: 280px;height: 100vh;  background-color: #1D3557; left: 0; top: 0; overflow-x: hidden; padding-top: 20px; display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
                     <div style="color: white; font-size: 20px; font-weight: bold; margin-bottom: 30px; display: flex; align-items: center;">
                         <img src="#"  style="width: 40px; height: 40px; margin-right: 10px;">
@@ -50,7 +48,7 @@
                         Add Property
                     </a>
                     
-                    <a href="#calendar" style="padding: 10px 15px; text-decoration: none;font-size: 1rem; color: #ffffff; display: flex; align-items: center;">
+                    <a href="#calendar" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;">
                         <span class="material-icons" style="margin-right: 10px;">calendar_today</span>
                         Calendar
                     </a>
@@ -73,7 +71,7 @@
                         <span class="material-icons">expand_more</span>
                     </button>
                     <div class="dropdown-container" style="display: none; background-color: #274772;">
-                        <a href="#Cashbook" style="padding: 10px 30px; text-decoration: none;font-size: 1rem; color: #ffffff; display: block;">Cashbook (Acc)</a>
+                        <a href="#Cashbook" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Cashbook (Acc)</a>
                     </div>
             
                     <button class="dropdown-btn" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; background: none; border: none; width: 100%; text-align: left; cursor: pointer; outline: none; display: flex; align-items: center; justify-content: space-between;">
@@ -88,8 +86,8 @@
                         <a href="#Suppliers" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Suppliers</a>
                         <a href="#Purchasing" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Purchasing</a>
                         <a href="#ItemCreation" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Item creation</a>
-                        <a href="#LaundryOut" style="padding: 10px 30px; text-decoration: none;font-size: 1rem; color: #ffffff; display: block;">Laundry Out</a>
-                        <a href="#LaundryIn" style="padding: 10px 30px; text-decoration: none;font-size: 1rem; color: #ffffff; display: block;">Laundry In</a>
+                        <a href="#LaundryOut" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Laundry Out</a>
+                        <a href="#LaundryIn" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Laundry In</a>
                         <a href="#Inventory Issuance" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Inventory Issuance</a>
                     </div>
             
@@ -149,9 +147,7 @@
                         <a href="#Emp Attendance" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Emp Attendance</a>
                         <a href="#Child pages" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Child Pages</a>
                     </div>
-                </div>
-            </nav>
-            
+                </div>            
             
         </aside>
 
@@ -197,6 +193,7 @@
                 </div>
             </div>
         </nav>
+
             <!-- Collapsible Section -->
             <div class="collapse" id="MenuBtn">
                 <div class="row bg-white">
@@ -212,7 +209,8 @@
                 <div class="container-fluid">
                     <h1 style="font-size: 1.2rem;">Owner/Executive Portal</h1>
                 </div>
-                <div class="container-fluid shadow p-3 mb-5 bg-white rounded" style="display: grid; grid-template-columns: 1fr; grid-template-rows: 0.3fr 1fr; grid-column-gap: 0px; grid-row-gap: 0px;">
+                <div class="container-fluid shadow p-3 mb-5 bg-white rounded">
+                    
                     <div class="border-bottom">
                         <div class="btn" style="background-color: #E63946; color: #FFF; border-bottom-left-radius: 0px; border-bottom-right-radius: 0px; min-width: 12vw;">
                            Financial
@@ -228,26 +226,156 @@
                          </div>
                     </div>
                 
-                    <div class="container border mt-4">
+                       <div class="container border mt-4">
                             <div class="row">
-                                <div class="col-md-3 border-right border-bottom">
-                                    <div class="row">
-                                        1
+                                <div class="col-md-3 col-sm-6 border-right border-bottom">
+                                    <div class="row pt-2 pb-2">
+                                        <div class="col-md-2 col-2 pr-0">
+                                            <i class="material-icons" style="color: #FAA916;">
+                                                attach_money
+                                            </i>
+                                        </div>
+                                           <div class="col-md-10 col-10 p-0">
+                                            Revenue Recieved
+                                           </div> 
+                
                                     </div>
-                                    <div class="row">
-                                        2
+                                    <div class="row p-4">
+                                        <span class="text-center text-align" style="font-size: 2.5rem;">
+                                            22
+                                        </span>
                                     </div>
                                 </div>
-                                <div class="col-md-3 border-right border-bottom">1</div>
-                                <div class="col-md-3 border-right border-bottom">1</div>
-                                <div class="col-md-3 border-bottom">1</div>
+                                <div class="col-md-3 col-sm-6 border-right border-bottom">
+                                    <div class="row pt-2 pb-2">
+                                        <div class="col-md-2 col-2 pr-0">
+                                            <i class="material-icons" style="color: #FAA916;">
+                                                attach_money
+                                            </i>
+                                        </div>
+                                           <div class="col-md-10 col-10 p-0">
+                                            Revenue Recieved
+                                           </div> 
+                
+                                    </div>
+                                    <div class="row p-4">
+                                        <span class="text-center text-align" style="font-size: 2.5rem;">
+                                            22
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 border-right border-bottom">
+                                    <div class="row pt-2 pb-2">
+                                        <div class="col-md-2 col-2 pr-0">
+                                            <i class="material-icons" style="color: #FAA916;">
+                                                attach_money
+                                            </i>
+                                        </div>
+                                           <div class="col-md-10 col-10 p-0">
+                                            Revenue Recieved
+                                           </div> 
+                
+                                    </div>
+                                    <div class="row p-4">
+                                        <span class="text-center text-align" style="font-size: 2.5rem;">
+                                            22
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6  border-bottom">
+                                    <div class="row pt-2 pb-2">
+                                        <div class="col-md-2 col-2 pr-0">
+                                            <i class="material-icons" style="color: #FAA916;">
+                                                attach_money
+                                            </i>
+                                        </div>
+                                           <div class="col-md-10 col-10 p-0">
+                                            Revenue Recieved
+                                           </div> 
+                
+                                    </div>
+                                    <div class="row p-4">
+                                        <span class="text-center text-align" style="font-size: 2.5rem;">
+                                            22
+                                        </span>
+                                    </div>
+                                </div>
+                                
 
                             </div>
                             <div class="row">
-                                <div class="col-md-3 border-right">1</div>
-                                <div class="col-md-3 border-right">1</div>
-                                <div class="col-md-3 border-right">1</div>
-                                <div class="col-md-3">1</div>
+                                <div class="col-md-3 col-sm-6  border-right">
+                                    <div class="row pt-2 pb-2">
+                                        <div class="col-md-2 col-2 pr-0">
+                                            <i class="material-icons" style="color: #FAA916;">
+                                                attach_money
+                                            </i>
+                                        </div>
+                                           <div class="col-md-10 col-10 p-0">
+                                            Revenue Recieved
+                                           </div> 
+                
+                                    </div>
+                                    <div class="row p-4">
+                                        <span class="text-center text-align" style="font-size: 2.5rem;">
+                                            22
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6  border-right">
+                                    <div class="row pt-2 pb-2">
+                                        <div class="col-md-2 col-2 pr-0">
+                                            <i class="material-icons" style="color: #FAA916;">
+                                                attach_money
+                                            </i>
+                                        </div>
+                                           <div class="col-md-10 col-10 p-0">
+                                            Revenue Recieved
+                                           </div> 
+                
+                                    </div>
+                                    <div class="row p-4">
+                                        <span class="text-center text-align" style="font-size: 2.5rem;">
+                                            22
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6  border-right">
+                                    <div class="row pt-2 pb-2">
+                                        <div class="col-md-2 col-2 pr-0">
+                                            <i class="material-icons" style="color: #FAA916;">
+                                                attach_money
+                                            </i>
+                                        </div>
+                                           <div class="col-md-10 col-10 p-0">
+                                            Revenue Recieved
+                                           </div> 
+                
+                                    </div>
+                                    <div class="row p-4">
+                                        <span class="text-center text-align" style="font-size: 2.5rem;">
+                                            22
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="col-md-3 col-sm-6 border-bottom">
+                                    <div class="row pt-2 pb-2">
+                                        <div class="col-md-2 col-2 pr-0">
+                                            <i class="material-icons" style="color: #FAA916;">
+                                                attach_money
+                                            </i>
+                                        </div>
+                                           <div class="col-md-10 col-10 p-0">
+                                            Revenue Recieved
+                                           </div> 
+                
+                                    </div>
+                                    <div class="row p-4">
+                                        <span class="text-center text-align" style="font-size: 2.5rem;">
+                                            22
+                                        </span>
+                                    </div>
+                                </div>
 
 
                             </div>
@@ -257,19 +385,19 @@
             </main>
         </div>
     </div>
-<script>
-    var dropdowns = document.getElementsByClassName("dropdown-btn");
-    for (var i = 0; i < dropdowns.length; i++) {
-        dropdowns[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var dropdownContent = this.nextElementSibling;
-            if (dropdownContent.style.display === "block") {
-                dropdownContent.style.display = "none";
-            } else {
-                dropdownContent.style.display = "block";
-            }
-        });
-    }
-</script>
+    <script>
+        var dropdowns = document.getElementsByClassName("dropdown-btn");
+        for (var i = 0; i < dropdowns.length; i++) {
+            dropdowns[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var dropdownContent = this.nextElementSibling;
+                if (dropdownContent.style.display === "block") {
+                    dropdownContent.style.display = "none";
+                } else {
+                    dropdownContent.style.display = "block";
+                }
+            });
+        }
+    </script>
 </body>
 </html>
