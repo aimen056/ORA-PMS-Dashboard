@@ -282,10 +282,14 @@ canvas {
 .modal-dialog-centered {
     display: flex;
     align-items: center;
-    min-height: calc(100% - 1rem);
+    max-height: calc(100vh - 3.5rem);
+    
+
 }
 
 .modal-dialog {
     max-width: 500px;
 }
+
+
 /* Ruquiya CSS End */

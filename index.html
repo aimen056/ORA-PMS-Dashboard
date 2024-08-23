@@ -12,10 +12,18 @@
         rel="stylesheet">
 
     <!--bootstrap-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+
+    
     <!--icons-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet"
@@ -539,6 +547,7 @@
                         <div class="container-fluid p-3 mb-4 shadow-bottom bg-white rounded-bottom">
                             <div class="container-fluid border mt-2 mb-2 rounded">
                                 <div class="row">
+                                    <!-- Total Rooms -->
                                     <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom">
                                         <div class="row pt-2 pb-2">
                                             <div class="col-md-2 col-2 pr-0">
@@ -548,7 +557,6 @@
                                             <div class="col-md-10 col-10 p-0">
                                                 Total Rooms
                                             </div>
-
                                         </div>
                                         <div class="row p-4">
                                             <span class="text-center text-align" style="font-size: 2.5rem;">
@@ -557,17 +565,16 @@
                                         </div>
                                     </div>
 
+                                    <!-- Active Rooms -->
                                     <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom">
                                         <div class="row pt-2 pb-2">
                                             <div class="col-md-2 col-2 pr-0">
                                                 <i class="material-icons"
                                                     style="color: #FAA916;margin-right: 7px;">meeting_room</i>
-
                                             </div>
                                             <div class="col-md-10 col-10 p-0">
                                                 Active Rooms
                                             </div>
-
                                         </div>
                                         <div class="row p-4">
                                             <span class="text-center text-align" style="font-size: 2.5rem;">
@@ -576,17 +583,16 @@
                                         </div>
                                     </div>
 
+                                    <!-- Inactive Rooms -->
                                     <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom">
                                         <div class="row pt-2 pb-2">
                                             <div class="col-md-2 col-2 pr-0">
                                                 <i class="material-icons"
                                                     style="color: #FAA916;margin-right: 7px;">highlight_off</i>
-
                                             </div>
                                             <div class="col-md-10 col-10 p-0">
                                                 Inactive Rooms
                                             </div>
-
                                         </div>
                                         <div class="row p-4">
                                             <span class="text-center text-align" style="font-size: 2.5rem;">
@@ -594,17 +600,17 @@
                                             </span>
                                         </div>
                                     </div>
+
+                                    <!-- Vacant Rooms -->
                                     <div class="col-md-6 col-lg-3 col-sm-6 border-bottom">
                                         <div class="row pt-2 pb-2">
                                             <div class="col-md-2 col-2 pr-0">
                                                 <i class="material-icons"
                                                     style="color: #FAA916;margin-right: 7px;">king_bed</i>
-
                                             </div>
                                             <div class="col-md-10 col-10 p-0">
                                                 Vacant Rooms
                                             </div>
-
                                         </div>
                                         <div class="row p-4">
                                             <span class="text-center text-align" style="font-size: 2.5rem;">
@@ -612,11 +618,12 @@
                                             </span>
                                         </div>
                                     </div>
-
-
                                 </div>
+
+                                <!-- Second Row of Small Boxes -->
                                 <div class="row">
-                                    <div class="col-md-6 col-lg-3 col-sm-6  border-end border-bottom">
+                                    <!-- Total Occupancy -->
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom">
                                         <div class="row pt-2 pb-2">
                                             <div class="col-md-2 col-2 pr-0">
                                                 <i class="material-icons"
@@ -625,7 +632,6 @@
                                             <div class="col-md-10 col-10 p-0">
                                                 Total Occupancy
                                             </div>
-
                                         </div>
                                         <div class="row p-4">
                                             <span class="text-center text-align" style="font-size: 2.5rem;">
@@ -633,6 +639,8 @@
                                             </span>
                                         </div>
                                     </div>
+
+                                    <!-- Dirty Rooms -->
                                     <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom">
                                         <div class="row pt-2 pb-2">
                                             <div class="col-md-2 col-2 pr-0">
@@ -642,7 +650,6 @@
                                             <div class="col-md-10 col-10 p-0">
                                                 Dirty Rooms
                                             </div>
-
                                         </div>
                                         <div class="row p-4">
                                             <span class="text-center text-align" style="font-size: 2.5rem;">
@@ -650,46 +657,146 @@
                                             </span>
                                         </div>
                                     </div>
+
+                                    <!-- GST/VAT Tax -->
                                     <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom">
-                                        <div class="row pt-2 pb-2">
+                                        <div class="row pt-2 pb-2 align-items-center">
                                             <div class="col-md-2 col-2 pr-0">
                                                 <i class="material-icons"
-                                                    style="color: #FAA916;margin-right: 7px;">request_quote</i>
+                                                    style="color: #FAA916; margin-right: 7px;">request_quote</i>
                                             </div>
                                             <div class="col-md-10 col-10 p-0">
                                                 GST/VAT Tax
+                                                <button type="button" class="btn btn-link p-0 text-decoration-none"
+                                                    data-bs-toggle="modal" data-bs-target="#editTaxModal"
+                                                    data-tax-target="gst-vat" style="margin-left: auto; color: red;">
+                                                    <i class="material-icons">edit</i>
+                                                </button>
                                             </div>
-
                                         </div>
                                         <div class="row p-4">
-                                            <span class="text-center text-align" style="font-size: 2.5rem;">
+                                            <span class="text-center text-align gst-vat" style="font-size: 2.5rem;">
                                                 5%
                                             </span>
                                         </div>
                                     </div>
+                                    <!-- Bed Tax -->
                                     <div class="col-md-6 col-lg-3 col-sm-6 border-bottom">
-                                        <div class="row pt-2 pb-2">
+                                        <div class="row pt-2 pb-2 align-items-center">
                                             <div class="col-md-2 col-2 pr-0">
                                                 <i class="material-icons"
-                                                    style="color: #FAA916;margin-right: 7px;">local_hotel</i>
+                                                    style="color: #FAA916; margin-right: 7px;">local_hotel</i>
                                             </div>
                                             <div class="col-md-10 col-10 p-0">
-                                                Bed Tax </div>
-
+                                                Bed Tax
+                                                <button type="button" class="btn btn-link p-0 text-decoration-none"
+                                                    data-bs-toggle="modal" data-bs-target="#editTaxModal"
+                                                    data-tax-target="bed-tax" style="margin-left: auto; color: red;">
+                                                    <i class="material-icons">edit</i>
+                                                </button>
+                                            </div>
                                         </div>
                                         <div class="row p-4">
-                                            <span class="text-center text-align" style="font-size: 2.5rem;">
+                                            <span class="text-center text-align bed-tax" style="font-size: 2.5rem;">
                                                 10%
                                             </span>
                                         </div>
                                     </div>
 
-
                                 </div>
                             </div>
 
                         </div>
-                        
+                        <div class="dashboard-container">
+                            <div class="card line-chart">
+                                <h2>Average Room Rate</h2>
+                                <canvas id="lineChart"></canvas>
+                            </div>
+                            <div class="card pie-chart">
+                                <h2>Occupancy rate</h2>
+                                <canvas id="pieChart"></canvas>
+                            </div>
+                            <div class="card controls">
+                                <h2>Average Room Rate</h2>
+                                <h1>$40</h1>
+                                <label><input type="checkbox"> Show Revenue Including VAT</label><br>
+                                <label><input type="checkbox"> Exclude Non-Accommodation Revenue</label>
+                                <p>Occupancy: 0.00%</p>
+                                <p>RevPAR: £0.00</p>
+                            </div>
+                            <div class="card property-list">
+                                <h2>Registered Child Properties</h2>
+                                <div class="table-responsive">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Property Name</th>
+                                                <th>Owner Name</th>
+                                                <th>Contact</th>
+                                                <th>Reg Date</th>
+                                                <th>Expiry Date</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Pakistan Property</td>
+                                                <td>Abc</td>
+                                                <td>123456788</td>
+                                                <td>03/4/2023</td>
+                                                <td class="status-expired">01/03/2024</td>
+                                                <td><span class="status-badge status-expired">Change status</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>The Second Home</td>
+                                                <td>Abc</td>
+                                                <td>126763726</td>
+                                                <td>05/08/2023</td>
+                                                <td class="status-active">09/06/2025</td>
+                                                <td><span class="status-badge status-active">Change status</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>abc</td>
+                                                <td>abc</td>
+                                                <td>1323123</td>
+                                                <td>02/04/2022</td>
+                                                <td class="status-soon-expiring">04/04/2026</td>
+                                                <td><span class="status-badge status-soon-expiring">Change status</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Modal for Editing Tax Rates ##############DID SOME CHANGES- CENTERED IT#####--> 
+                    <div class="modal fade" id="editTaxModal" tabindex="-1" aria-labelledby="editTaxModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered"> <!-- Add `modal-dialog-centered` class here -->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="editTaxModalLabel">Edit Tax Rate</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="editTaxForm">
+                                        <input type="hidden" id="taxTypeInput">
+                                        <div class="mb-3">
+                                            <label for="taxRateInput" class="form-label">Tax Rate (%)</label>
+                                            <input type="number" class="form-control" id="taxRateInput" step="0.01">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-primary" id="saveTaxRate">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </main>
