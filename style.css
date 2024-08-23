@@ -37,3 +37,38 @@
         transform: translateX(0);
     }
 }*/
+
+@media (max-width: 768px) {
+    .main {
+        margin-left: 0 !important; /* Remove margin-left for smaller screens */
+    }
+
+    #sidebar {
+        width: 100%; /* Make sidebar full-width or collapse it entirely */
+    }
+}
+
+@media (min-width: 769px) {
+    .main {
+        margin-left: 280px; /* Set the margin-left to accommodate the sidebar */
+    }
+}
+
+
+/*Cuurency sign*/
+.currSign:before {
+    content: '$';
+}
+
+/*Font size responsive for boxes"*/
+.sm-box-title {
+    font-size: clamp(16px, 1.5vw, 1.1rem);  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sm-box-num {
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    text-align: center;
+}

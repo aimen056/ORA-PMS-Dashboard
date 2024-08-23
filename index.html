@@ -20,17 +20,27 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src= "app.js"></script>
     <title>ORA PMS</title>
 </head>
 <body style="background-color:#F1FAEE;; font-family: 'Inter', sans-serif; font-size: 1rem;">
     <div class="d-flex">
-        <aside id="sidebar" class="sidebar-toggle d-none d-md-block collapse" style="width: 280px;  background-color: #1D3557; left: 0; top: 0; overflow-x: hidden; padding-top: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+        <aside id="sidebar" class="sidebar-toggle d-none d-md-block collapse" style="position: fixed; top: 0; left: 0; z-index: 1; height: 100vh; width: 215px;  background-color: #1D3557; left: 0; top: 0; overflow-x: hidden; padding-top: 20px; display: flex; flex-direction: column; justify-content: space-between;">
                 <div>
-                    <div style="color: white; font-size: 20px; font-weight: bold; margin-bottom: 30px; display: flex; align-items: center;">
+                    <div class="d-flex justify-content-between" style="color: white; font-size: 20px; font-weight: bold; margin-bottom: 30px; display: flex; align-items: center;">
                         <img src="#"  style="width: 40px; height: 40px; margin-right: 10px;">
                         ORAPMS
+                     <!-- Add Collapse Button Inside Sidebar -->
+                      <span>
+                        <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-expanded="true" aria-controls="sidebar" style="margin-left: 10px;">
+                            <span class="material-symbols-outlined" style="color: #ffffff;">
+                                dock_to_right
+                            </span>
+                    </button>
+                    </span>
                     </div>
+                  
                     <input type="text" placeholder="Search...." style="width: 90%; padding: 5px; margin-bottom: 5px; border-radius: 5px; border: none;">
                     <a href="#dashboard" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;transition: background-color 0.3s;">
                         <span class="material-icons" style="margin-right: 10px;">dashboard</span>
@@ -156,11 +166,10 @@
         </aside>
 
                                                             <!-- Main Component -->
-        <div class="main container-fluid" >
+        <div class="main container-fluid" style="margin-left: 215px;" >
                                                              <!-- Navbar Section -->
             <nav class="navbar navbar-expand border-bottom" style="padding: 5px 0; background-color: #F1FAEE;">
                 <div class="d-flex align-items-center position-relative w-100" style="height: 80px;">
-        
                                                                 <!-- Breadcrumb -->
                      <div class="d-none d-md-flex flex-grow-1 align-items-center">
                           <nav aria-label="breadcrumb" class="w-100">
@@ -248,7 +257,7 @@
                  <div class="tab-content" id="myTabContent">                                  
                         <div class="tab-pane fade show active" id="financial" role="tabpanel" aria-labelledby="financial-tab">
                         <div class="container-fluid p-3 mb-4 shadow-bottom bg-white rounded-bottom">
-                            <div class="container border mt-2 rounded">
+                            <div class="container-fluid border mt-2 mb-2 rounded">
                                 <div class="row">
                                     <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom">
                                         <div class="row pt-2 pb-2">
@@ -257,13 +266,13 @@
                                                     attach_money
                                                 </i>
                                             </div>
-                                               <div class="col-md-10 col-10 p-0">
+                                               <div class="sm-box-title col-md-10 col-10">
                                                 Revenue Recieved
                                                </div> 
                     
                                         </div>
                                         <div class="row p-4">
-                                            <span class="text-center text-align" style="font-size: 2.5rem;">
+                                            <span class="sm-box-num curr text-center text-align" >
                                                 22
                                             </span>
                                         </div>
@@ -273,17 +282,17 @@
                                         <div class="row pt-2 pb-2">
                                             <div class="col-md-2 col-2 ">
                                                 <i class="material-icons" style="color: #FAA916;">
-                                                    attach_money
+                                                    hourglass_empty
                                                 </i>
                                             </div>
-                                               <div class="col-md-10 col-10 p-0">
-                                                Revenue Recieved
+                                               <div class="sm-box-title col-md-10 col-10">
+                                                Pending Revenue
                                                </div> 
                     
                                         </div>
                                         <div class="row p-4">
-                                            <span class="text-center text-align" style="font-size: 2.5rem;">
-                                                22
+                                            <span class="sm-box-num curr text-center text-align">
+                                                0
                                             </span>
                                         </div>
                                     </div>
@@ -292,17 +301,17 @@
                                         <div class="row pt-2 pb-2">
                                             <div class="col-md-2 col-2 ">
                                                 <i class="material-icons" style="color: #FAA916;">
-                                                    attach_money
+                                                    receipt_long
                                                 </i>
                                             </div>
-                                               <div class="col-md-10 col-10 p-0">
-                                                Revenue Recieved
+                                               <div class="sm-box-title col-md-10 col-10">
+                                                Refund
                                                </div> 
                     
                                         </div>
                                         <div class="row p-4">
-                                            <span class="text-center text-align" style="font-size: 2.5rem;">
-                                                22
+                                            <span class="sm-box-num curr text-center text-align" >
+                                                5000
                                             </span>
                                         </div>
                                     </div>
@@ -310,17 +319,17 @@
                                         <div class="row pt-2 pb-2">
                                             <div class="col-md-2 col-2 ">
                                                 <i class="material-icons" style="color: #FAA916;">
-                                                    attach_money
+                                                    account_balance_wallet
                                                 </i>
                                             </div>
-                                               <div class="col-md-10 col-10 p-0">
-                                                Revenue Recieved
+                                               <div class="sm-box-title col-md-10 col-10">
+                                                Partially Expenses
                                                </div> 
                     
                                         </div>
                                         <div class="row p-4">
-                                            <span class="text-center text-align" style="font-size: 2.5rem;">
-                                                22
+                                            <span class="sm-box-num curr text-center text-align" >
+                                                0
                                             </span>
                                         </div>
                                     </div>
@@ -332,17 +341,17 @@
                                         <div class="row pt-2 pb-2">
                                             <div class="col-md-2 col-2 ">
                                                 <i class="material-icons" style="color: #FAA916;">
-                                                    attach_money
+                                                    lock_outline
                                                 </i>
                                             </div>
-                                               <div class="col-md-10 col-10 p-0">
-                                                Revenue Recieved
+                                               <div class="sm-box-title col-md-10 col-10">
+                                                Payable Room Security
                                                </div> 
                     
                                         </div>
                                         <div class="row p-4">
-                                            <span class="text-center text-align" style="font-size: 2.5rem;">
-                                                22
+                                            <span class="sm-box-num curr text-center text-align">
+                                                0
                                             </span>
                                         </div>
                                     </div>
@@ -350,17 +359,17 @@
                                         <div class="row pt-2 pb-2">
                                             <div class="col-md-2 col-2 ">
                                                 <i class="material-icons" style="color: #FAA916;">
-                                                    attach_money
+                                                    payments
                                                 </i>
                                             </div>
-                                               <div class="col-md-10 col-10 p-0">
-                                                Revenue Recieved
+                                               <div class="sm-box-title col-md-10 col-10">
+                                                Payment to Suppliers
                                                </div> 
                     
                                         </div>
                                         <div class="row p-4">
-                                            <span class="text-center text-align" style="font-size: 2.5rem;">
-                                                22
+                                            <span class="sm-box-num curr text-center text-align" >
+                                                0
                                             </span>
                                         </div>
                                     </div>
@@ -368,35 +377,35 @@
                                         <div class="row pt-2 pb-2">
                                             <div class="col-md-2 col-2 ">
                                                 <i class="material-icons" style="color: #FAA916;">
-                                                    attach_money
+                                                   description
                                                 </i>
                                             </div>
-                                               <div class="col-md-10 col-10 p-0">
-                                                Revenue Recieved
+                                               <div class="sm-box-title col-md-10 col-10">
+                                                Invoice Recieved
                                                </div> 
                     
                                         </div>
                                         <div class="row p-4">
-                                            <span class="text-center text-align" style="font-size: 2.5rem;">
-                                                22
+                                            <span class="curr sm-box-num text-center text-align">
+                                                6801110
                                             </span>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 col-lg-3 col-sm-6 border-bottom">
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-bottom ">
                                         <div class="row pt-2 pb-2">
                                             <div class="col-md-2 col-2 ">
                                                 <i class="material-icons" style="color: #FAA916;">
-                                                    attach_money
+                                                    inventory
                                                 </i>
                                             </div>
-                                               <div class="col-md-10 col-10 p-0">
-                                                Revenue Recieved
+                                               <div class="sm-box-title col-md-10 col-10">
+                                                Purchasing Inventory Items
                                                </div> 
                     
                                         </div>
                                         <div class="row p-4">
-                                            <span class="text-center text-align" style="font-size: 2.5rem;">
-                                                22
+                                            <span class="curr sm-box-num text-center text-align">
+                                                6811000
                                             </span>
                                         </div>
                                     </div>
@@ -447,42 +456,6 @@
             </main>
         </div>
     </div>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Dropdown toggle functionality
-        var dropdowns = document.getElementsByClassName("dropdown-btn");
-        for (var i = 0; i < dropdowns.length; i++) {
-            dropdowns[i].addEventListener("click", function() {
-                this.classList.toggle("active");
-                var dropdownContent = this.nextElementSibling;
-                if (dropdownContent.style.display === "block") {
-                    dropdownContent.style.display = "none";
-                } else {
-                    dropdownContent.style.display = "block";
-                }
-            });
-        }
-
-        // Sidebar toggle functionality
-        var toggleButton = document.getElementById("toggleSidebar");
-        var sidebar = document.getElementById("sidebar");
-
-        if (toggleButton && sidebar) {
-            toggleButton.addEventListener("click", function() {
-                if (sidebar.classList.contains("d-none")) {
-                    sidebar.classList.remove("d-none");
-                } else {
-                    sidebar.classList.add("d-none");
-                }
-            });
-        } else {
-            console.error("Toggle button or sidebar not found!");
-        }
-    });
-
-
-</script>
-
 
 </body>
 </html>
