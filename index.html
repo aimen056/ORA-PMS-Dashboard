@@ -334,11 +334,11 @@
                                 aria-controls="reservation" aria-selected="false">Reservation</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="room_tab" href="room" aria-current="page" data-bs-toggle="tab"
+                            <a class="nav-link" id="room_tab" href="#room" aria-current="page" data-bs-toggle="tab"
                                 role="tab" aria-controls="room" aria-selected="true">Room</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="team_and_customer_tab" href="team_and_customer" aria-current="page"
+                            <a class="nav-link" id="team_and_customer_tab" href="#team_and_customer" aria-current="page"
                                 data-bs-toggle="tab" role="tab" aria-controls="team_and_customer"
                                 aria-selected="true">Team & Customer</a>
                         </li>
@@ -543,7 +543,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="tab-pane fade" id="reservation" role="tabpanel" aria-labelledby="reservation-tab">
+                    <div class="tab-pane fade" id="reservation" role="tabpanel"
+                        aria-labelledby="reservation-tab">
+                        <h1>this is reservation</h1>
+                    </div>
+                    <div class="tab-pane fade" id="room" role="tabpanel" aria-labelledby="room_tab">
                         <div class="container-fluid p-3 mb-4 shadow-bottom bg-white rounded-bottom">
                             <div class="container-fluid border mt-2 mb-2 rounded">
                                 <div class="row">
