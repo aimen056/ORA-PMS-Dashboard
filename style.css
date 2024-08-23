@@ -1,0 +1,74 @@
+                                                               /*tabs*/
+.nav-link{
+      min-width: 12vw;
+        text-align: center;
+        color: #000000;
+}
+.nav-tabs .nav-link.active {
+    background-color: #E63946;
+    color: hsl(0, 0%, 100%);
+}
+
+
+
+.nav-tabs .nav-link:hover {
+    color: #fff;
+    background-color: #E63946; /* Hover effect */
+
+}
+                                                           /*CUSTOM */
+
+.shadow-top {
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-bottom {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/*@media (max-width: 768px) {
+    #sidebar {
+        width: 100%;
+        position: absolute;
+        z-index: 1000;
+        transition: all 0.3s ease-in-out;
+    }
+    #toggleSidebar.active + #sidebar {
+        transform: translateX(0);
+    }
+}*/
+
+@media (max-width: 768px) {
+    .main {
+        margin-left: 0 !important; /* Remove margin-left for smaller screens */
+    }
+
+    #sidebar {
+        width: 100%; /* Make sidebar full-width or collapse it entirely */
+    }
+}
+
+@media (min-width: 769px) {
+    .main {
+        margin-left: 280px; /* Set the margin-left to accommodate the sidebar */
+    }
+}
+
+
+/*Cuurency sign*/
+.currSign:before {
+    content: '$';
+}
+
+/*Font size responsive for boxes"*/
+.sm-box-title {
+    font-size: clamp(16px, 1.5vw, 1.1rem);  
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.sm-box-num {
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+    text-align: center;
+}
