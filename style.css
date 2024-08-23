@@ -1,4 +1,6 @@
-                                                               /*tabs*/
+      
+      /*aimen css*/
+      /*tabs*/
 .nav-link{
       min-width: 12vw;
         text-align: center;
@@ -12,9 +14,7 @@
 
 
 .nav-tabs .nav-link:hover {
-    color: #fff;
-    background-color: #E63946; /* Hover effect */
-
+    text-decoration: none;
 }
                                                            /*CUSTOM */
 
@@ -72,3 +72,220 @@
     font-size: clamp(1.5rem, 2.5vw, 2.5rem);
     text-align: center;
 }
+
+/*REVENUE AND EXPENSE GRAPH*/
+.chart-container {
+    position: relative;
+    height: 40vh;
+    width: 35vw;
+    margin: auto;
+}
+@media (max-width: 1199px) {
+    .chart-container {
+        width: 90%; 
+    }
+}
+
+
+/*aimen end*/
+
+
+
+
+/* Ruquiya CSS Start */
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    flex-basis: 45%;
+    min-width: 250px;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.card h2 {
+    font-size: 1.2rem;
+    color: #0D1B2A;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card p {
+    font-size: 1.5rem;
+}
+
+.card:hover {
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.dashboard-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-top: 30px; 
+}
+
+canvas {
+    width: 100% !important;
+    max-width: 600px;
+    height: auto !important;
+}
+
+.line-chart, .pie-chart, .controls, .property-list {
+    flex-basis: 49%;
+}
+
+.line-chart canvas, .pie-chart canvas {
+    max-width: 95%;
+    max-height: 80%;
+    margin: 0 auto;
+}
+
+.controls h1 {
+    font-size: 2rem;
+    color: #FAA916;
+}
+
+.controls label {
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.property-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.property-list th, .property-list td {
+    padding: 0.57rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.property-list th {
+    background-color: #0D1B2A;
+    color: #fff;
+}
+
+.property-list td.status-expired {
+    color: red;
+}
+
+.property-list td.status-active {
+    color: green;
+}
+
+.property-list td.status-soon-expiring {
+    color: orange;
+}
+
+.property-list .status-badge {
+    cursor: pointer;
+    padding: 0.25rem 0.2rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.property-list .status-badge.status-expired {
+    background-color: #E53E3E;
+    color: #fff;
+}
+
+.property-list .status-badge.status-active {
+    background-color: #38A169;
+    color: #fff;
+}
+
+.property-list .status-badge.status-soon-expiring {
+    background-color: #DD6B20;
+    color: #fff;
+}
+
+/* Modal Header */
+.bg-gradient-primary {
+    background: linear-gradient(90deg, #274772, #0056b3);
+    border-bottom: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-right: auto;
+}
+
+.close.no-border {
+    font-size: 1.5rem;
+    color: #fff;
+    background: none;
+    border: none;
+    margin-left: 10px; /* Adds space between text and the close button */
+    opacity: 0.9;
+}
+
+.close.no-border:hover {
+    opacity: 1;
+}
+
+/* Modal Content */
+.modal-content {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Form Controls */
+.form-control {
+    border-radius: 8px;
+    border: 2px solid #ced4da;
+    box-shadow: none;
+    font-size: 1.1rem;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #274772;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.25);
+}
+
+/* Submit Button */
+.btn-primary {
+    background-color: #E63946;
+    border-color: #E63946;
+    font-size: 1.2rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #E63946;
+    border-color: #E63946;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.btn-lg {
+    font-size: 1.25rem;
+}
+
+/* Modal Dialog */
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+}
+
+.modal-dialog {
+    max-width: 500px;
+}
+/* Ruquiya CSS End */
