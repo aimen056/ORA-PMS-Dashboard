@@ -9,6 +9,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    //tooltip for icons
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl);
+        });
+
+    //tooltip for rate change
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[title]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+    });
+
+    
     // Sidebar toggle functionality
     var toggleButton = document.getElementById("toggleSidebar");
     var sidebar = document.getElementById("sidebar");
@@ -200,5 +213,9 @@ document.addEventListener("DOMContentLoaded", function () {
         } else {
             cell.classList.add('dec');
         }
+
+
+
+
     });
 });
