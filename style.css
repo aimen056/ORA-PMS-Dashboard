@@ -86,7 +86,7 @@
     }
 }
 
-/*CHAT GPT ONE*/
+/*Table formatting*/
 .pl-table table {
     border-radius: 16px; 
     overflow: hidden; 
@@ -109,11 +109,11 @@
 .pl-table table tbody td {
     font-size: 1rem;
 }
-.pl-table .profit{
+.pl-table .inc{
     background-color: rgba(75, 199, 105, 0.25);
     color: #2caa4b;
 }
-.pl-table .loss{
+.pl-table .dec{
     background-color: rgba(230, 57, 70, 0.25);
     color: #E63946;
 }

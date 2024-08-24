@@ -162,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
 
-    //PROFIT LOSS TABLE SIGNS
+    //PROFIT loss TABLE SIGNS
     const elements = document.querySelectorAll('.pl-curr');
     
     elements.forEach(function(td) {
@@ -170,10 +170,10 @@ document.addEventListener("DOMContentLoaded", function () {
         
         // check if value is positive or negative
         if (value > 0) {
-            td.classList.add('profit');
+            td.classList.add('inc');
             td.textContent = `+$${value.toLocaleString()}`;
         } else if (value < 0) {
-            td.classList.add('loss');
+            td.classList.add('dec');
             td.textContent = `-$${Math.abs(value).toLocaleString()}`;
         }
     });
@@ -196,9 +196,9 @@ document.addEventListener("DOMContentLoaded", function () {
         cell.textContent = `${Math.abs(percentChange).toFixed(2)}%`;
 
         if (percentChange >= 0) {
-            cell.classList.add('profit');
+            cell.classList.add('inc');
         } else {
-            cell.classList.add('loss');
+            cell.classList.add('dec');
         }
     });
 });
