@@ -1,261 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 
+
+    <!--NOT USING-->
     <!--bootstrap-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-uEYzCn7WpB8xTsdh4HhLJtD+YtXt8iDzGqI/0c2w3XKTShMbvUCghc1SUtqbT40f"
+        crossorigin="anonymous"></script>
+
 
     <!--icons-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
+
+
+    <!--Chart js-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script type="text/javascript" src="app.js"></script>
+
+    <!--css file-->
     <link rel="stylesheet" href="style.css">
-    <script type="text/javascript" src= "app.js"></script>
+
     <title>ORA PMS</title>
 </head>
+
 <body style="background-color:#F1FAEE;; font-family: 'Inter', sans-serif; font-size: 1rem;">
     <div class="d-flex">
-        <aside id="sidebar" class="sidebar-toggle d-none d-md-block collapse" style="position: fixed; top: 0; left: 0; z-index: 1; height: 100vh; width: 215px;  background-color: #1D3557; left: 0; top: 0; overflow-x: hidden; padding-top: 20px; display: flex; flex-direction: column; justify-content: space-between;">
-                <div>
-                    <div class="d-flex justify-content-between" style="color: white; font-size: 20px; font-weight: bold; margin-bottom: 30px; display: flex; align-items: center;">
-                        <img src="#"  style="width: 40px; height: 40px; margin-right: 10px;">
-                        ORAPMS
-                     <!-- Add Collapse Button Inside Sidebar -->
-                      <span>
-                        <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar" aria-expanded="true" aria-controls="sidebar" style="margin-left: 10px;">
+        <aside id="sidebar" class="sidebar-toggle d-none d-md-block collapse"
+            style="position: fixed; top: 0; left: 0; z-index: 1; height: 100vh; width: 215px;  background-color: #1D3557; left: 0; top: 0; overflow-x: hidden; padding-top: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+                <div class="d-flex justify-content-between"
+                    style="color: white; font-size: 20px; font-weight: bold; margin-bottom: 30px; display: flex; align-items: center;">
+                    <img src="#" style="width: 40px; height: 40px; margin-right: 10px;">
+                    ORAPMS
+                    <!-- Add Collapse Button Inside Sidebar -->
+                    <span>
+                        <button class="btn" type="button" data-bs-toggle="collapse" data-bs-target="#sidebar"
+                            aria-expanded="true" aria-controls="sidebar" style="margin-left: 10px;">
                             <span class="material-symbols-outlined" style="color: #ffffff;">
                                 dock_to_right
                             </span>
-                    </button>
-                    </span>
-                    </div>
-                  
-                    <input type="text" placeholder="Search...." style="width: 90%; padding: 5px; margin-bottom: 5px; border-radius: 5px; border: none;">
-                    <a href="#dashboard" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;transition: background-color 0.3s;">
-                        <span class="material-icons" style="margin-right: 10px;">dashboard</span>
-                        Dashboard
-                    </a>
-                    
-                    <a href="#checkin" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;">
-                        <span class="material-icons" style="margin-right: 10px;">login</span>
-                        Check-in
-                    </a>
-                    
-                    <a href="#reservation" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;">
-                        <span class="material-icons" style="margin-right: 10px;">event</span>
-                        Reservations
-                    </a>
-                    
-                    <a href="#addproperty" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;">
-                        <span class="material-icons" style="margin-right: 10px;">add_business</span>
-                        Add Property
-                    </a>
-                    
-                    <a href="#calendar" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;">
-                        <span class="material-icons" style="margin-right: 10px;">calendar_today</span>
-                        Calendar
-                    </a>
-                    
-                    <a href="#restaurant" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;">
-                        <span class="material-icons" style="margin-right: 10px;">restaurant_menu</span>
-                        Restaurant
-                    </a>
-                    
-                    <a href="#Room categories" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;">
-                        <span class="material-icons" style="margin-right: 10px;">hotel</span>
-                        Room Categories
-                    </a>
-                    
-                    <button class="dropdown-btn" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; background: none; border: none; width: 100%; text-align: left; cursor: pointer; outline: none; display: flex; align-items: center; justify-content: space-between;">
-                        <div style="display: flex; align-items: center;">
-                            <span class="material-icons" style="margin-right: 10px;">account_balance_wallet</span>
-                            Accounts
-                        </div>
-                        <span class="material-icons">expand_more</span>
-                    </button>
-                    <div class="dropdown-container" style="display: none; background-color: #274772;">
-                        <a href="#Cashbook" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Cashbook (Acc)</a>
-                    </div>
-            
-                    <button class="dropdown-btn" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; background: none; border: none; width: 100%; text-align: left; cursor: pointer; outline: none; display: flex; align-items: center; justify-content: space-between;">
-                        <div style="display: flex; align-items: center;">
-                            <span class="material-icons" style="margin-right: 10px;">corporate_fare</span>
-                            Inventory
-                        </div>
-                        <span class="material-icons">expand_more</span>
-                    </button>
-                    <div class="dropdown-container" style="display: none; background-color: #274772;">
-                        <a href="#Addlaundry" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Add laundry</a>
-                        <a href="#Suppliers" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Suppliers</a>
-                        <a href="#Purchasing" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Purchasing</a>
-                        <a href="#ItemCreation" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Item creation</a>
-                        <a href="#LaundryOut" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Laundry Out</a>
-                        <a href="#LaundryIn" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Laundry In</a>
-                        <a href="#Inventory Issuance" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Inventory Issuance</a>
-                    </div>
-            
-                    <button class="dropdown-btn" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; background: none; border: none; width: 100%; text-align: left; cursor: pointer; outline: none; display: flex; align-items: center; justify-content: space-between;">
-                        <div style="display: flex; align-items: center;">
-                            <span class="material-icons" style="margin-right: 10px;">add_home_work</span>
-                            Property
-                        </div>
-                        <span class="material-icons">expand_more</span>
-                    </button>
-                    <div class="dropdown-container" style="display: none; background-color:#274772;">
-                        <a href="#Expense Category" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Expense Category </a>
-                        <a href="#Expenses" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Expenses </a>
-                        <a href="#Cashbook" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Cashbook </a>
-                    </div>
-            
-                    <button class="dropdown-btn" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; background: none; border: none; width: 100%; text-align: left; cursor: pointer; outline: none; display: flex; align-items: center; justify-content: space-between;">
-                        <div style="display: flex; align-items: center;">
-                            <span class="material-icons" style="margin-right: 10px;">add_chart</span>
-                            Reports
-                        </div>
-                        <span class="material-icons">expand_more</span>
-                    </button>
-                    <div class="dropdown-container" style="display: none; background-color: #274772;">
-                        <a href="#ReservationList" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Reservation list </a>
-                        <a href="#CustomerDetails" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Customer Details</a>
-                        <a href="#Reports" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Reports </a>
-                        <a href="#Reportstochild" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Reports to child </a>
-                    </div>
-                    
-                    <button class="dropdown-btn" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; background: none; border: none; width: 100%; text-align: left; cursor: pointer; outline: none; display: flex; align-items: center; justify-content: space-between;">
-                        <div style="display: flex; align-items: center;">
-                            <span class="material-icons" style="margin-right: 10px;">home</span>
-                            Room
-                        </div>
-                        <span class="material-icons">expand_more</span>
-                    </button>
-                    <div class="dropdown-container" style="display: none; background-color: #274772;">
-                        <a href="#Addquestions" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Add Questions </a>
-                        <a href="#Housekeeping" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Housekeeping</a>
-                        <a href="#Maintenance" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Maintenance</a>
-                        <a href="#RoomSharing" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Room Sharing</a>
-                    </div>
-            
-                    <button class="dropdown-btn" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; background: none; border: none; width: 100%; text-align: left; cursor: pointer; outline: none; display: flex; align-items: center; justify-content: space-between;">
-                        <div style="display: flex; align-items: center;">
-                            <span class="material-icons" style="margin-right: 10px;">person</span>
-                            User
-                        </div>
-                        <span class="material-icons">expand_more</span>
-                    </button>
-                    <div class="dropdown-container" style="display: none; background-color: #274772;">
-                        <a href="#Createuser" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Create User </a>
-                        <a href="#Userpages" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">User Pages</a>
-                        <a href="#Empregistration" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Emp Registration</a>
-                        <a href="#Payroll" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Payroll</a>
-                        <a href="#Emp Attendance" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Emp Attendance</a>
-                        <a href="#Child pages" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Child Pages</a>
-                    </div>
-                </div>            
-            
-        </aside>
-
-                                                            <!-- Main Component -->
-        <div class="main container-fluid" style="margin-left: 215px;" >
-                                                             <!-- Navbar Section -->
-            <nav class="navbar navbar-expand border-bottom" style="padding: 5px 0; background-color: #F1FAEE;">
-                <div class="d-flex align-items-center position-relative w-100" style="height: 80px;">
-                                                                <!-- Breadcrumb -->
-                     <div class="d-none d-md-flex flex-grow-1 align-items-center">
-                          <nav aria-label="breadcrumb" class="w-100">
-                            <ol class="breadcrumb mb-0" style="background-color: #F1FAEE; font-size: 1rem;">
-                                 <li class="breadcrumb-item"><a href="#" style="text-decoration: none; color: black;">Home</a></li>
-                                 <li class="breadcrumb-item"><a style="text-decoration: none; color: black;">Dashboard</a></li>
-                            </ol>
-                         </nav>
-                </div>
-                <div class="col-2 d-md-none">
-                    <button id="toggleSidebar" class="btn" type="button" data-toggle="collapse" data-target="#sidebar" aria-expanded="false" aria-controls="sidebar">
-                        <span class="material-symbols-outlined">
-                            dock_to_right
-                        </span>
-                    </button>
-                </div>
-                
-                                                    <!-- Time, Day, and Date -->
-                <div class="text-center d-flex justify-content-center align-items-center mx-auto">
-                    <span style="font-size: 1.875rem; font-weight: bold;">3:42
-                        <sup style="font-size: 1rem;">PM</sup>
-                    </span>
-                <div class="mx-3 d-none d-md-block text-center">
-                    <span style="font-size: 1rem;" class="d-block">Saturday</span>
-                    <span style="font-size: 1rem;" class="d-block">10 August 2024</span>
-                    </div>
-                </div>
-                
-                <!-- Collapse Button for Mobile -->
-                <div class="col-sm-2 col-2 d-md-none d-flex justify-content-end">
-                    <button class="btn" type="button" data-toggle="collapse" data-target="#MenuBtn" aria-expanded="false" aria-controls="MenuBtn">
-                        <span class="material-icons">
-                            menu
-                            </span>
                         </button>
+                    </span>
                 </div>
 
-                <!-- Icons Section -->
-                <div class="d-none d-md-flex justify-content-end align-items-center flex-grow-1">
-                    <span class="material-icons" style="font-size: 2rem; margin-right: 0.9375rem;">info</span>
-                    <span class="material-icons" style="font-size: 2rem; margin-right: 0.9375rem;">contact_support</span>
-                    <span class="material-icons" style="font-size: 2rem; margin-right: 0.9375rem;">account_circle</span>
+                <input id="search_bar" type="text" placeholder="Search...."
+                    style="width: 90%; padding: 5px; margin-bottom: 5px; border-radius: 5px; border: none;">
+                <a href="#dashboard"
+                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;transition: background-color 0.3s;">
+                    <span class="material-icons" style="margin-right: 10px;">dashboard</span>
+                    Dashboard
+                </a>
 
+                <a href="#checkin"
+                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;">
+                    <span class="material-icons" style="margin-right: 10px;">login</span>
+                    Check-in
+                </a>
+
+                <a href="#reservation"
+                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;">
+                    <span class="material-icons" style="margin-right: 10px;">event</span>
+                    Reservations
+                </a>
+
+                <a href="#addproperty"
+                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;">
+                    <span class="material-icons" style="margin-right: 10px;">add_business</span>
+                    Add Property
+                </a>
+
+                <a href="#calendar"
+                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;">
+                    <span class="material-icons" style="margin-right: 10px;">calendar_today</span>
+                    Calendar
+                </a>
+
+                <a href="#restaurant"
+                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;">
+                    <span class="material-icons" style="margin-right: 10px;">restaurant_menu</span>
+                    Restaurant
+                </a>
+
+                <a href="#Room categories"
+                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;">
+                    <span class="material-icons" style="margin-right: 10px;">hotel</span>
+                    Room Categories
+                </a>
+
+                <button class="dropdown-btn"
+                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; background: none; border: none; width: 100%; text-align: left; cursor: pointer; outline: none; display: flex; align-items: center; justify-content: space-between;">
+                    <div style="display: flex; align-items: center;">
+                        <span class="material-icons" style="margin-right: 10px;">account_balance_wallet</span>
+                        Accounts
+                    </div>
+                    <span class="material-icons">expand_more</span>
+                </button>
+                <div class="dropdown-container" style="display: none; background-color: #274772;">
+                    <a href="#Cashbook"
+                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Cashbook
+                        (Acc)</a>
+                </div>
+
+                <button class="dropdown-btn"
+                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; background: none; border: none; width: 100%; text-align: left; cursor: pointer; outline: none; display: flex; align-items: center; justify-content: space-between;">
+                    <div style="display: flex; align-items: center;">
+                        <span class="material-icons" style="margin-right: 10px;">corporate_fare</span>
+                        Inventory
+                    </div>
+                    <span class="material-icons">expand_more</span>
+                </button>
+                <div class="dropdown-container" style="display: none; background-color: #274772;">
+                    <a href="#Addlaundry"
+                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Add
+                        laundry</a>
+                    <a href="#Suppliers"
+                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Suppliers</a>
+                    <a href="#Purchasing"
+                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Purchasing</a>
+                    <a href="#ItemCreation"
+                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Item
+                        creation</a>
+                    <a href="#LaundryOut"
+                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Laundry
+                        Out</a>
+                    <a href="#LaundryIn"
+                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Laundry
+                        In</a>
+                    <a href="#Inventory Issuance"
+                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Inventory
+                        Issuance</a>
+                </div>
+
+                <button class="dropdown-btn"
+                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; background: none; border: none; width: 100%; text-align: left; cursor: pointer; outline: none; display: flex; align-items: center; justify-content: space-between;">
+                    <div style="display: flex; align-items: center;">
+                        <span class="material-icons" style="margin-right: 10px;">add_home_work</span>
+                        Property
+                    </div>
+                    <span class="material-icons">expand_more</span>
+                </button>
+                <div class="dropdown-container" style="display: none; background-color:#274772;">
+                    <a href="#Expense Category"
+                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Expense
+                        Category </a>
+                    <a href="#Expenses"
+                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Expenses
+                    </a>
+                    <a href="#Cashbook"
+                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Cashbook
+                    </a>
+                </div>
+
+                <button class="dropdown-btn"
+                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; background: none; border: none; width: 100%; text-align: left; cursor: pointer; outline: none; display: flex; align-items: center; justify-content: space-between;">
+                    <div style="display: flex; align-items: center;">
+                        <span class="material-icons" style="margin-right: 10px;">add_chart</span>
+                        Reports
+                    </div>
+                    <span class="material-icons">expand_more</span>
+                </button>
+                <div class="dropdown-container" style="display: none; background-color: #274772;">
+                    <a href="#ReservationList"
+                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Reservation
+                        list </a>
+                    <a href="#CustomerDetails"
+                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Customer
+                        Details</a>
+                    <a href="#Reports"
+                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Reports
+                    </a>
+                    <a href="#Reportstochild"
+                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Reports
+                        to child </a>
+                </div>
+
+                <button class="dropdown-btn"
+                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; background: none; border: none; width: 100%; text-align: left; cursor: pointer; outline: none; display: flex; align-items: center; justify-content: space-between;">
+                    <div style="display: flex; align-items: center;">
+                        <span class="material-icons" style="margin-right: 10px;">home</span>
+                        Room
+                    </div>
+                    <span class="material-icons">expand_more</span>
+                </button>
+                <div class="dropdown-container" style="display: none; background-color: #274772;">
+                    <a href="#Addquestions"
+                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Add
+                        Questions </a>
+                    <a href="#Housekeeping"
+                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Housekeeping</a>
+                    <a href="#Maintenance"
+                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Maintenance</a>
+                    <a href="#RoomSharing"
+                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Room
+                        Sharing</a>
+                </div>
+
+                <button class="dropdown-btn"
+                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; background: none; border: none; width: 100%; text-align: left; cursor: pointer; outline: none; display: flex; align-items: center; justify-content: space-between;">
+                    <div style="display: flex; align-items: center;">
+                        <span class="material-icons" style="margin-right: 10px;">person</span>
+                        User
+                    </div>
+                    <span class="material-icons">expand_more</span>
+                </button>
+                <div class="dropdown-container" style="display: none; background-color: #274772;">
+                    <a href="#Createuser"
+                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Create
+                        User </a>
+                    <a href="#Userpages"
+                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">User
+                        Pages</a>
+                    <a href="#Empregistration"
+                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Emp
+                        Registration</a>
+                    <a href="#Payroll"
+                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Payroll</a>
+                    <a href="#Emp Attendance"
+                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Emp
+                        Attendance</a>
+                    <a href="#Child pages"
+                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Child
+                        Pages</a>
                 </div>
             </div>
-        </nav>
+
+        </aside>
+
+        <!-- Main Component -->
+        <div class="main container-fluid" style="margin-left: 215px;">
+            <!-- Navbar Section -->
+            <nav class="navbar navbar-expand border-bottom" style="padding: 5px 0; background-color: #F1FAEE;">
+                <div class="d-flex align-items-center position-relative w-100" style="height: 80px;">
+                    <!-- Breadcrumb -->
+                    <div class="d-none d-md-flex flex-grow-1 align-items-center">
+                        <nav aria-label="breadcrumb" class="w-100">
+                            <ol class="breadcrumb mb-0" style="background-color: #F1FAEE; font-size: 1rem;">
+                                <li class="breadcrumb-item"><a href="#"
+                                        style="text-decoration: none; color: black;">Home</a></li>
+                                <li class="breadcrumb-item"><a
+                                        style="text-decoration: none; color: black;">Dashboard</a></li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <div class="col-2 d-md-none">
+                        <button id="toggleSidebar" class="btn" type="button" data-toggle="collapse"
+                            data-target="#sidebar" aria-expanded="false" aria-controls="sidebar">
+                            <span class="material-symbols-outlined">
+                                dock_to_right
+                            </span>
+                        </button>
+                    </div>
+
+                    <!-- Time, Day, and Date -->
+                    <div class="text-center d-flex justify-content-center align-items-center mx-auto">
+                        <span style="font-size: 1.875rem; font-weight: bold;">3:42
+                            <sup style="font-size: 1rem;">PM</sup>
+                        </span>
+                        <div class="mx-3 d-none d-md-block text-center">
+                            <span style="font-size: 1rem;" class="d-block">Saturday</span>
+                            <span style="font-size: 1rem;" class="d-block">10 August 2024</span>
+                        </div>
+                    </div>
+
+                    <!-- Collapse Button for Mobile -->
+                    <div class="col-sm-2 col-2 d-md-none d-flex justify-content-end">
+                        <button class="btn" type="button" data-toggle="collapse" data-target="#MenuBtn"
+                            aria-expanded="false" aria-controls="MenuBtn">
+                            <span class="material-icons">
+                                menu
+                            </span>
+                        </button>
+                    </div>
+
+                    <!-- Icons Section -->
+                    <div class="d-none d-md-flex justify-content-end align-items-center flex-grow-1">
+                        <span class="material-icons" style="font-size: 2rem; margin-right: 0.9375rem;"
+                            data-bs-toggle="tooltip" data-bs-placement="bottom" title="Information">
+                            info
+                        </span>
+                        <span class="material-icons" style="font-size: 2rem; margin-right: 0.9375rem;"
+                            data-bs-toggle="tooltip" data-bs-placement="bottom" title="Support">
+                            contact_support
+                        </span>
+                        <span class="material-icons" style="font-size: 2rem; margin-right: 0.9375rem;"
+                            data-bs-toggle="tooltip" data-bs-placement="bottom" title="Profile">
+                            account_circle
+                        </span>
+                    </div>
+                </div>
+            </nav>
 
             <!-- Collapsible Section -->
             <div class="collapse" id="MenuBtn">
                 <div class="row bg-white">
                     <div class="col-12 rounded d-md-none d-flex justify-content-end">
                         <span class="material-icons" style="font-size: 2rem; margin-right: 0.9375rem;">info</span>
-                    <span class="material-icons" style="font-size: 2rem; margin-right: 0.9375rem;">contact_support</span>
-                    <span class="material-icons" style="font-size: 2rem; margin-right: 0.9375rem;">account_circle</span>
+                        <span class="material-icons"
+                            style="font-size: 2rem; margin-right: 0.9375rem;">contact_support</span>
+                        <span class="material-icons"
+                            style="font-size: 2rem; margin-right: 0.9375rem;">account_circle</span>
 
                     </div>
                 </div>
             </div>
-                                                            <!-- Main Content Section -->
+            <!-- Main Content Section -->
             <main class="p-3">
                 <div class="container-fluid">
                     <h1 style="font-size: 1.2rem;">Owner/Executive Portal</h1>
                 </div>
 
-                                                                        <!--Tab list container-->
+                <!--Tab list container-->
 
                 <div class="container-fluid shadow-top p-3 pb-0 bg-white rounded-top">
-                    
-                    <ul class="nav nav-tabs flex-column flex-sm-row" id="maintabs" role="tablist" >
+
+                    <ul class="nav nav-tabs flex-column flex-sm-row" id="maintabs" role="tablist">
                         <li class="nav-item" role="presentation">
-                            <a class="nav-link active" id="financial-tab" data-bs-toggle="tab" href="#financial" role="tab" aria-controls="financial" aria-selected="true">Financial</a>
-                          </li>
-                          <li class="nav-item" role="presentation">
-                            <a class="nav-link" id="reservation-tab" data-bs-toggle="tab" href="#reservation" role="tab" aria-controls="reservation" aria-selected="false">Reservation</a>
-                          </li>
-                        <li class="nav-item">
-                            <a class="nav-link" id="room_tab"  href="room" aria-current="page"  data-bs-toggle="tab"  role="tab" aria-controls="room" aria-selected="true">Room</a>
+                            <a class="nav-link active" id="financial-tab" data-bs-toggle="tab" href="#financial"
+                                role="tab" aria-controls="financial" aria-selected="true">Financial</a>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <a class="nav-link" id="reservation-tab" data-bs-toggle="tab" href="#reservation" role="tab"
+                                aria-controls="reservation" aria-selected="false">Reservation</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" id="team_and_customer_tab"  href="team_and_customer" aria-current="page"  data-bs-toggle="tab"  role="tab" aria-controls="team_and_customer" aria-selected="true">Team & Customer</a>
+                            <a class="nav-link" id="room_tab" href="#room" aria-current="page" data-bs-toggle="tab"
+                                role="tab" aria-controls="room" aria-selected="true">Room</a>
                         </li>
-                      </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" id="team_and_customer_tab" href="#team_and_customer" aria-current="page"
+                                data-bs-toggle="tab" role="tab" aria-controls="team_and_customer"
+                                aria-selected="true">Team & Customer</a>
+                        </li>
+                    </ul>
                 </div>
-                                         <!--tab content container-->     
-                 <div class="tab-content" id="myTabContent">                                  
-                        <div class="tab-pane fade show active" id="financial" role="tabpanel" aria-labelledby="financial-tab">
+                <!--tab content container-->
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="financial" role="tabpanel"
+                        aria-labelledby="financial-tab">
                         <div class="container-fluid p-3 mb-4 shadow-bottom bg-white rounded-bottom">
                             <div class="container-fluid border mt-2 mb-2 rounded">
                                 <div class="row">
@@ -266,18 +371,18 @@
                                                     attach_money
                                                 </i>
                                             </div>
-                                               <div class="sm-box-title col-md-10 col-10">
+                                            <div class="sm-box-title col-md-10 col-10">
                                                 Revenue Recieved
-                                               </div> 
-                    
+                                            </div>
+
                                         </div>
                                         <div class="row p-4">
-                                            <span class="sm-box-num curr text-center text-align" >
+                                            <span class="sm-box-num curr text-center text-align">
                                                 22
                                             </span>
                                         </div>
                                     </div>
-    
+
                                     <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom">
                                         <div class="row pt-2 pb-2">
                                             <div class="col-md-2 col-2 ">
@@ -285,10 +390,10 @@
                                                     hourglass_empty
                                                 </i>
                                             </div>
-                                               <div class="sm-box-title col-md-10 col-10">
+                                            <div class="sm-box-title col-md-10 col-10">
                                                 Pending Revenue
-                                               </div> 
-                    
+                                            </div>
+
                                         </div>
                                         <div class="row p-4">
                                             <span class="sm-box-num curr text-center text-align">
@@ -296,7 +401,7 @@
                                             </span>
                                         </div>
                                     </div>
-                        
+
                                     <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom">
                                         <div class="row pt-2 pb-2">
                                             <div class="col-md-2 col-2 ">
@@ -304,13 +409,13 @@
                                                     receipt_long
                                                 </i>
                                             </div>
-                                               <div class="sm-box-title col-md-10 col-10">
+                                            <div class="sm-box-title col-md-10 col-10">
                                                 Refund
-                                               </div> 
-                    
+                                            </div>
+
                                         </div>
                                         <div class="row p-4">
-                                            <span class="sm-box-num curr text-center text-align" >
+                                            <span class="sm-box-num curr text-center text-align">
                                                 5000
                                             </span>
                                         </div>
@@ -322,19 +427,19 @@
                                                     account_balance_wallet
                                                 </i>
                                             </div>
-                                               <div class="sm-box-title col-md-10 col-10">
+                                            <div class="sm-box-title col-md-10 col-10">
                                                 Partially Expenses
-                                               </div> 
-                    
+                                            </div>
+
                                         </div>
                                         <div class="row p-4">
-                                            <span class="sm-box-num curr text-center text-align" >
+                                            <span class="sm-box-num curr text-center text-align">
                                                 0
                                             </span>
                                         </div>
                                     </div>
-                                    
-    
+
+
                                 </div>
                                 <div class="row">
                                     <div class="col-md-6 col-lg-3 col-sm-6  border-end border-bottom">
@@ -344,10 +449,10 @@
                                                     lock_outline
                                                 </i>
                                             </div>
-                                               <div class="sm-box-title col-md-10 col-10">
+                                            <div class="sm-box-title col-md-10 col-10">
                                                 Payable Room Security
-                                               </div> 
-                    
+                                            </div>
+
                                         </div>
                                         <div class="row p-4">
                                             <span class="sm-box-num curr text-center text-align">
@@ -362,13 +467,13 @@
                                                     payments
                                                 </i>
                                             </div>
-                                               <div class="sm-box-title col-md-10 col-10">
+                                            <div class="sm-box-title col-md-10 col-10">
                                                 Payment to Suppliers
-                                               </div> 
-                    
+                                            </div>
+
                                         </div>
                                         <div class="row p-4">
-                                            <span class="sm-box-num curr text-center text-align" >
+                                            <span class="sm-box-num curr text-center text-align">
                                                 0
                                             </span>
                                         </div>
@@ -377,13 +482,13 @@
                                         <div class="row pt-2 pb-2">
                                             <div class="col-md-2 col-2 ">
                                                 <i class="material-icons" style="color: #FAA916;">
-                                                   description
+                                                    description
                                                 </i>
                                             </div>
-                                               <div class="sm-box-title col-md-10 col-10">
+                                            <div class="sm-box-title col-md-10 col-10">
                                                 Invoice Recieved
-                                               </div> 
-                    
+                                            </div>
+
                                         </div>
                                         <div class="row p-4">
                                             <span class="curr sm-box-num text-center text-align">
@@ -398,10 +503,10 @@
                                                     inventory
                                                 </i>
                                             </div>
-                                               <div class="sm-box-title col-md-10 col-10">
+                                            <div class="sm-box-title col-md-10 col-10">
                                                 Purchasing Inventory Items
-                                               </div> 
-                    
+                                            </div>
+
                                         </div>
                                         <div class="row p-4">
                                             <span class="curr sm-box-num text-center text-align">
@@ -409,53 +514,644 @@
                                             </span>
                                         </div>
                                     </div>
-    
-    
-                                </div>
-                        </div>
-                        
-                        </div>
-                        <div class="row row-cols-1 row-cols-md-1 row-cols-xl-2 g-4">
-                            <div class="col">
-                              <div class="card border-0 shadow rounded-3" style="height: 50vh;">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col">
-                              <div class="card border-0 shadow rounded-3" style="height: 50vh;">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col">
-                              <div class="card border-0 shadow rounded-3" style="height: 50vh;">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="col">
-                              <div class="card border-0 shadow rounded-3" style="height: 50vh;">
-                                <div class="card-body">
-                                  <h5 class="card-title">Card title</h5>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        
-                        <div class="tab-pane fade" id="reservation" role="tabpanel" aria-labelledby="reservation-tab">
-                          <h2>Reservation Section</h2>
-                          <p>This is the reservation management section. Include booking forms, calendars, and other relevant content here.</p>
-                        </div>
-                      </div>
 
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="row row-cols-1 row-cols-md-1 row-cols-xl-2 g-4 text-center">
+                            <div class="col">
+                                <div class="card border-0 shadow rounded-3" style="height: 100%;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Profit/Loss</h5>
+                                        <div class="table-responsive pl-table pt-2">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">SR#</th>
+                                                        <th scope="col">MONTH</th>
+                                                        <th scope="col">REVENUE</th>
+                                                        <th scope="col">EXPENSE</th>
+                                                        <th scope="col">P\L</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>January</td>
+                                                        <td class="curr">1200000</td>
+                                                        <td class="curr">800000</td>
+                                                        <td class="pl-curr" data-value="400000 ">400000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>February</td>
+                                                        <td class="curr">1500000</td>
+                                                        <td class="curr">1200000</td>
+                                                        <td class="pl-curr" data-value="-300000"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">3</th>
+                                                        <td>March</td>
+                                                        <td class="curr">1800000</td>
+                                                        <td class="curr">1400000</td>
+                                                        <td class="pl-curr" data-value="400000 "></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">4</th>
+                                                        <td>April</td>
+                                                        <td class="curr">1400000</td>
+                                                        <td class="curr">1600000</td>
+                                                        <td class="pl-curr" data-value="-200000"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">5</th>
+                                                        <td>May</td>
+                                                        <td class="curr">1400000</td>
+                                                        <td class="curr">1600000</td>
+                                                        <td class="pl-curr" data-value="-900000"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div>
+                                            <a class="view_more_btn btn btn-outline-primary" href="#">VIEW ALL</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card border-0 shadow rounded-3" style="height: 100%;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Revenue & Expense</h5>
+                                        <div class="chart-container">
+                                            <canvas id="comboChart"></canvas>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card border-0 shadow rounded-3" style="height: 100%;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Sales Analysis</h5>
+                                        <div class="table-responsive pl-table pt-2 ">
+                                            <table class="table table-hover" id="payment-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">PAY MODE</th>
+                                                        <th scope="col">PREVIOUS</th>
+                                                        <th scope="col">CURRENT</th>
+                                                        <th scope="col">PERCENT</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Cash</th>
+                                                        <td class="curr" data-prev="1200000">1200000</td>
+                                                        <td class="curr" data-curr="800000">800000</td>
+                                                        <td class="p-change"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Bank</th>
+                                                        <td class="curr" data-prev="1500000">1500000</td>
+                                                        <td class="curr" data-curr="1200000">1200000</td>
+                                                        <td class="p-change"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Credit</th>
+                                                        <td class="curr" data-prev="1800000">1800000</td>
+                                                        <td class="curr" data-curr="1400000">1400000</td>
+                                                        <td class="p-change"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Debit</th>
+                                                        <td class="curr" data-prev="1400000">1400000</td>
+                                                        <td class="curr" data-curr="1600000">1600000</td>
+                                                        <td class="p-change"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Other</th>
+                                                        <td class="curr" data-prev="1200000">1200000</td>
+                                                        <td class="curr" data-curr="1500000">1500000</td>
+                                                        <td class="p-change"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div>
+                                            <a class="view_more_btn btn btn-outline-primary" href="#">VIEW ALL</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card border-0 shadow rounded-3" style="height: 100%;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Purchases</h5>
+                                        <div class="table-responsive pl-table pt-2">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">SR#</th>
+                                                        <th scope="col">INVOICE NO#</th>
+                                                        <th scope="col">TOTAL PAY</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>INV001</td>
+                                                        <td class="curr">1200000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>INV002</td>
+                                                        <td class="curr">1500000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">3</th>
+                                                        <td>INV003</td>
+                                                        <td class="curr">1800000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">4</th>
+                                                        <td>INV004</td>
+                                                        <td class="curr">1400000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">5</th>
+                                                        <td>INV005</td>
+                                                        <td class="curr">1400000</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div>
+                                            <a class="view_more_btn btn btn-outline-primary" href="#">VIEW ALL</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="reservation" role="tabpanel" aria-labelledby="reservation-tab">
+                        <h1>this is reservation</h1>
+                    </div>
+                    <div class="tab-pane fade" id="room" role="tabpanel" aria-labelledby="room_tab">
+                        <div class="container-fluid p-3 mb-4 shadow-bottom bg-white rounded-bottom">
+                            <div class="container-fluid border mt-2 mb-2 rounded">
+                                <div class="row">
+                                    <!-- Total Rooms -->
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom">
+                                        <div class="row pt-2 pb-2">
+                                            <div class="col-md-2 col-2 pr-0">
+                                                <i class="material-icons"
+                                                    style="color: #FAA916;margin-right: 7px;">hotel</i>
+                                            </div>
+                                            <div class="col-md-10 col-10 p-0">
+                                                Total Rooms
+                                            </div>
+                                        </div>
+                                        <div class="row p-4">
+                                            <span class="text-center text-align" style="font-size: 2.5rem;">
+                                                15
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Active Rooms -->
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom">
+                                        <div class="row pt-2 pb-2">
+                                            <div class="col-md-2 col-2 pr-0">
+                                                <i class="material-icons"
+                                                    style="color: #FAA916;margin-right: 7px;">meeting_room</i>
+                                            </div>
+                                            <div class="col-md-10 col-10 p-0">
+                                                Active Rooms
+                                            </div>
+                                        </div>
+                                        <div class="row p-4">
+                                            <span class="text-center text-align" style="font-size: 2.5rem;">
+                                                5
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Inactive Rooms -->
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom">
+                                        <div class="row pt-2 pb-2">
+                                            <div class="col-md-2 col-2 pr-0">
+                                                <i class="material-icons"
+                                                    style="color: #FAA916;margin-right: 7px;">highlight_off</i>
+                                            </div>
+                                            <div class="col-md-10 col-10 p-0">
+                                                Inactive Rooms
+                                            </div>
+                                        </div>
+                                        <div class="row p-4">
+                                            <span class="text-center text-align" style="font-size: 2.5rem;">
+                                                4
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Vacant Rooms -->
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-bottom">
+                                        <div class="row pt-2 pb-2">
+                                            <div class="col-md-2 col-2 pr-0">
+                                                <i class="material-icons"
+                                                    style="color: #FAA916;margin-right: 7px;">king_bed</i>
+                                            </div>
+                                            <div class="col-md-10 col-10 p-0">
+                                                Vacant Rooms
+                                            </div>
+                                        </div>
+                                        <div class="row p-4">
+                                            <span class="text-center text-align" style="font-size: 2.5rem;">
+                                                3
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Second Row of Small Boxes -->
+                                <div class="row">
+                                    <!-- Total Occupancy -->
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom">
+                                        <div class="row pt-2 pb-2">
+                                            <div class="col-md-2 col-2 pr-0">
+                                                <i class="material-icons"
+                                                    style="color: #FAA916;margin-right: 7px;">people</i>
+                                            </div>
+                                            <div class="col-md-10 col-10 p-0">
+                                                Total Occupancy
+                                            </div>
+                                        </div>
+                                        <div class="row p-4">
+                                            <span class="text-center text-align" style="font-size: 2.5rem;">
+                                                3
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Dirty Rooms -->
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom">
+                                        <div class="row pt-2 pb-2">
+                                            <div class="col-md-2 col-2 pr-0">
+                                                <i class="material-icons"
+                                                    style="color: #FAA916;margin-right: 7px;">cleaning_services</i>
+                                            </div>
+                                            <div class="col-md-10 col-10 p-0">
+                                                Dirty Rooms
+                                            </div>
+                                        </div>
+                                        <div class="row p-4">
+                                            <span class="text-center text-align" style="font-size: 2.5rem;">
+                                                4
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <!-- GST/VAT Tax -->
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom">
+                                        <div class="row pt-2 pb-2 align-items-center">
+                                            <div class="col-md-2 col-2 pr-0">
+                                                <i class="material-icons"
+                                                    style="color: #FAA916; margin-right: 7px;">request_quote</i>
+                                            </div>
+                                            <div class="col-md-10 col-10 p-0">
+                                                GST/VAT Tax
+                                                <button type="button" class="btn btn-link p-0 text-decoration-none"
+                                                    data-bs-toggle="modal" data-bs-target="#editTaxModal"
+                                                    data-tax-target="gst-vat" style="margin-left: auto; color: red;" title="Edit GST/VAT tax">
+                                                    <i class="material-icons">edit</i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class="row p-4">
+                                            <span class="text-center text-align gst-vat" style="font-size: 2.5rem;">
+                                                5%
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <!-- Bed Tax -->
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-bottom">
+                                        <div class="row pt-2 pb-2 align-items-center">
+                                            <div class="col-md-2 col-2 pr-0">
+                                                <i class="material-icons"
+                                                    style="color: #FAA916; margin-right: 7px;">local_hotel</i>
+                                            </div>
+                                            <div class="col-md-10 col-10 p-0">
+                                                Bed Tax
+                                                <button type="button" class="btn btn-link p-0 text-decoration-none"
+                                                    data-bs-toggle="modal" data-bs-target="#editTaxModal"
+                                                    data-tax-target="bed-tax" style="margin-left: auto; color: red;"
+                                                    title="Edit Bed Tax">
+                                                    <i class="material-icons">edit</i>
+                                                </button>
+
+                                            </div>
+                                        </div>
+                                        <div class="row p-4">
+                                            <span class="text-center text-align bed-tax" style="font-size: 2.5rem;">
+                                                10%
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="dashboard-container">
+                            <div class="card-container card line-chart">
+                                <h2>Average Room Rate</h2>
+                                <canvas id="lineChart"></canvas>
+                            </div>
+                            <div class="card-container card pie-chart">
+                                <h2>Occupancy rate</h2>
+                                <canvas id="pieChart"></canvas>
+                            </div>
+                            <div class="card-container card controls">
+                                <h2>Average Room Rate</h2>
+                                <h1>$40</h1>
+                                <label><input type="checkbox"> Show Revenue Including VAT</label><br>
+                                <label><input type="checkbox"> Exclude Non-Accommodation Revenue</label>
+                                <p>Occupancy: 0.00%</p>
+                                <p>RevPAR: £0.00</p>
+                            </div>
+                            <div class="card-container card property-list">
+                                <h2>Registered Child Properties</h2>
+
+                                <div class="table-format table-responsive">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Property Name</th>
+                                                <th>Owner Name</th>
+                                                <th>Contact</th>
+                                                <th>Reg Date</th>
+                                                <th>Expiry Date</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Pakistan Property</td>
+                                                <td>Abc</td>
+                                                <td>123456788</td>
+                                                <td>03/4/2023</td>
+                                                <td class="status-expired">01/03/2024</td>
+                                                <td><span class="status-badge status-expired">Change status</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>The Second Home</td>
+                                                <td>Abc</td>
+                                                <td>126763726</td>
+                                                <td>05/08/2023</td>
+                                                <td class="status-active">09/06/2025</td>
+                                                <td><span class="status-badge status-active">Change status</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>abc</td>
+                                                <td>abc</td>
+                                                <td>1323123</td>
+                                                <td>02/04/2022</td>
+                                                <td class="status-soon-expiring">04/04/2026</td>
+                                                <td><span class="status-badge status-soon-expiring">Change status</span>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="card-container card demand-list">
+                                <h2>Demands</h2>
+                                <div class="table-responsive">
+                                    <table>
+                                        <thead>
+                                            <tr>
+                                                <th>Item</th>
+                                                <th>Date</th>
+                                                <th>Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <strong>Bed *Demo*</strong><br>
+                                                    <span class="description">2 bed in first floor</span>
+                                                </td>
+                                                <td>2024-08-06</td>
+                                                <td><span class="status-badge status-processing">Processing</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>Table *Demo*</strong><br>
+                                                    <span class="description">4 seater wooden table</span>
+                                                </td>
+                                                <td>2024-08-10</td>
+                                                <td><span class="status-badge status-completed">Completed</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>Chair *Demo*</strong><br>
+                                                    <span class="description">Ergonomic office chair</span>
+                                                </td>
+                                                <td>2024-08-15</td>
+                                                <td><span class="status-badge status-pending">Pending</span></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="card-container card demand-list">
+                                <h2>Coming soon</h2>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Modal for Editing Tax Rates ##############DID SOME CHANGES- CENTERED IT#####-->
+                    <div class="modal fade" id="editTaxModal" tabindex="-1" aria-labelledby="editTaxModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered"> <!-- Add `modal-dialog-centered` class here -->
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="editTaxModalLabel">Edit Tax Rate</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form id="editTaxForm">
+                                        <input type="hidden" id="taxTypeInput">
+                                        <div class="mb-3">
+                                            <label for="taxRateInput" class="form-label">Tax Rate (%)</label>
+                                            <input type="number" class="form-control" id="taxRateInput" step="0.01">
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Cancel</button>
+                                    <button type="button" class="btn btn-primary" id="saveTaxRate">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="team_and_customer" role="tabpanel"
+                        aria-labelledby="team_and_customer_tab">
+                        <div class="container-fluid p-3 mb-4 shadow-bottom bg-white rounded-bottom">
+                            <div class="container-fluid border mt-2 mb-2 rounded">
+                                <div class="row">
+                                    <!-- Total Customer -->
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom">
+                                        <div class="row pt-2 pb-2">
+                                            <div class="col-md-2 col-2 pr-0">
+                                                <i class="material-icons"
+                                                    style="color: #FAA916;margin-right: 7px;">groups</i>
+                                            </div>
+                                            <div class="col-md-10 col-10 p-0">
+                                                Total Customer
+                                            </div>
+                                        </div>
+                                        <div class="row p-4">
+                                            <span class="text-center text-align" style="font-size: 2.5rem;">
+                                                15
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Total Staff  -->
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom">
+                                        <div class="row pt-2 pb-2">
+                                            <div class="col-md-2 col-2 pr-0">
+                                                <i class="material-icons"
+                                                    style="color: #FAA916;margin-right: 7px;">group</i>
+                                            </div>
+                                            <div class="col-md-10 col-10 p-0">
+                                                Total Staff
+                                            </div>
+                                        </div>
+                                        <div class="row p-4">
+                                            <span class="text-center text-align" style="font-size: 2.5rem;">
+                                                18
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <!-- Staff Requisition  -->
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom">
+                                        <div class="row pt-2 pb-2">
+                                            <div class="col-md-2 col-2 pr-0">
+                                                <i class="material-icons"
+                                                    style="color: #FAA916;margin-right: 7px;">man</i>
+                                            </div>
+                                            <div class="col-md-10 col-10 p-0">
+                                                Staff Requisition
+                                            </div>
+                                        </div>
+                                        <div class="row p-4">
+                                            <span class="text-center text-align" style="font-size: 2.5rem;">
+                                                3
+                                            </span>
+                                        </div>
+                                    </div>
+
+
+                                    <!-- Coming Soon  -->
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom">
+                                        <div class="row pt-2 pb-2">
+                                            <div class="col-md-2 col-2 pr-0">
+                                                <i class="material-icons"
+                                                    style="color: #FAA916;margin-right: 7px;">man</i>
+                                            </div>
+                                            <div class="col-md-10 col-10 p-0">
+                                                Coming Soon
+                                            </div>
+                                        </div>
+                                        <div class="row p-4">
+                                            <span class="text-center text-align" style="font-size: 2.5rem;">
+                                                0
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="dashboard-container">
+                            <!-- Staff Pie Chart -->
+                            <div class="card-container card pie-chart">
+                                <h2>Staff</h2>
+                                <canvas id="staffPieChart"></canvas>
+                            </div>
+
+                            <!-- Guest Feedback -->
+                            <div class="card-container card property-list">
+                                <h2>Guest Feedback</h2>
+                                <div class="table-format table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Guest Name</th>
+                                                <th>Date of Stay</th>
+                                                <th>Room Number</th>
+                                                <th>Rating</th>
+                                                <th>Comments</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>Ruquiya Nasir</td>
+                                                <td>15 Aug 2024</td>
+                                                <td>102</td>
+                                                <td>
+                                                    <span class="stars five-stars">★★★★★</span>
+                                                </td>
+                                                <td>Excellent service, very clean and comfortable.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Murtaza</td>
+                                                <td>10 Aug 2024</td>
+                                                <td>205</td>
+                                                <td>
+                                                    <span class="stars four-stars">★★★★☆</span>
+                                                </td>
+                                                <td>Great location, but the room was a bit noisy.</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Mahnoor Kazmi</td>
+                                                <td>05 Aug 2024</td>
+                                                <td>301</td>
+                                                <td>
+                                                    <span class="stars three-stars">★★★☆☆</span>
+                                                </td>
+                                                <td>Wonderful stay, friendly staff, and delicious food!</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Laiba Shahzadi</td>
+                                                <td>09 Aug 2024</td>
+                                                <td>302</td>
+                                                <td>
+                                                    <span class="stars five-stars">★★★★★</span>
+                                                </td>
+                                                <td>Wonderful stay, friendly staff, and delicious food!</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </main>
         </div>
     </div>
 
 </body>
+
 </html>
