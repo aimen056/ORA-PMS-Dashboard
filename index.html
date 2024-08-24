@@ -29,14 +29,16 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
-    <!--css file-->
-    <link rel="stylesheet" href="style.css">
-
+   
 
     <!--Chart js-->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
     <script type="text/javascript" src="app.js"></script>
+
+     <!--css file-->
+     <link rel="stylesheet" href="style.css">
+
     <title>ORA PMS</title>
 </head>
 
@@ -60,7 +62,7 @@
                     </span>
                 </div>
 
-                <input type="text" placeholder="Search...."
+                <input id="search_bar" type="text" placeholder="Search...."
                     style="width: 90%; padding: 5px; margin-bottom: 5px; border-radius: 5px; border: none;">
                 <a href="#dashboard"
                     style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;transition: background-color 0.3s;">
@@ -509,35 +511,177 @@
                         </div>
                         <div class="row row-cols-1 row-cols-md-1 row-cols-xl-2 g-4 text-center">
                             <div class="col">
-                                <div class="card border-0 shadow rounded-3" style="height: 50vh;">
+                                <div class="card border-0 shadow rounded-3" style="height: 100%;">
                                     <div class="card-body">
                                         <h5 class="card-title">Profit/Loss</h5>
+                                        <div class="table-responsive pl-table pt-2">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                      <th scope="col">SR#</th>
+                                                      <th scope="col">MONTH</th>
+                                                      <th scope="col">REVENUE</th>
+                                                      <th scope="col">EXPENSE</th>
+                                                      <th scope="col">P\L</th>
+                                                    </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>January</td>
+                                                        <td class="curr">1200000</td>
+                                                        <td class="curr">800000</td>
+                                                        <td class="pl-curr"  data-value="400000 ">400000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>February</td>
+                                                        <td class="curr">1500000</td>
+                                                        <td class="curr">1200000</td>
+                                                        <td class="pl-curr" data-value="-300000"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">3</th>
+                                                        <td>March</td>
+                                                        <td class="curr">1800000</td>
+                                                        <td class="curr">1400000</td>
+                                                        <td class="pl-curr" data-value="400000 "></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">4</th>
+                                                        <td>April</td>
+                                                        <td class="curr">1400000</td>
+                                                        <td class="curr">1600000</td>
+                                                        <td class="pl-curr" data-value="-200000"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">5</th>
+                                                        <td>May</td>
+                                                        <td class="curr">1400000</td>
+                                                        <td class="curr">1600000</td>
+                                                        <td class="pl-curr" data-value="-900000"></td>
+                                                    </tr>
+                                                  </tbody>
+                                              </table>
+                                        </div>
+                                        <div>
+                                            <a class= "view_more_btn btn btn-outline-primary" href="#">VIEW ALL</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                           
                             <div class="col">
-                                <div class="card border-0 shadow rounded-3" style="height: 50vh;">
+                                <div class="card border-0 shadow rounded-3" style="height: 100%;">
                                     <div class="card-body">
                                         <h5 class="card-title">Revenue & Expense</h5>
                                         <div class="chart-container">
                                             <canvas id="comboChart"></canvas>
                                         </div>
+                                        
 
                                     </div>
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="card border-0 shadow rounded-3" style="height: 50vh;">
+                                <div class="card border-0 shadow rounded-3" style="height: 100%;">
                                     <div class="card-body">
-                                        <h5 class="card-title">Revenue</h5>
+                                        <h5 class="card-title">Sales Analysis</h5>
+                                        <div class="table-responsive pl-table pt-2 ">
+                                            <table class="table table-hover" id="payment-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">PAY MODE</th>
+                                                        <th scope="col">PREVIOUS</th>
+                                                        <th scope="col">CURRENT</th>
+                                                        <th scope="col">PERCENT</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <th scope="row">Cash</th>
+                                                        <td class="curr" data-prev="1200000">1200000</td>
+                                                        <td class="curr" data-curr="800000">800000</td>
+                                                        <td class="p-change"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Bank</th>
+                                                        <td class="curr" data-prev="1500000">1500000</td>
+                                                        <td class="curr" data-curr="1200000">1200000</td>
+                                                        <td class="p-change"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Credit</th>
+                                                        <td class="curr" data-prev="1800000">1800000</td>
+                                                        <td class="curr" data-curr="1400000">1400000</td>
+                                                        <td class="p-change"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Debit</th>
+                                                        <td class="curr" data-prev="1400000">1400000</td>
+                                                        <td class="curr" data-curr="1600000">1600000</td>
+                                                        <td class="p-change"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">Other</th>
+                                                        <td class="curr" data-prev="1200000">1200000</td>
+                                                        <td class="curr" data-curr="1500000">1500000</td>
+                                                        <td class="p-change"></td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <div>
+                                            <a class= "view_more_btn btn btn-outline-primary" href="#">VIEW ALL</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="card border-0 shadow rounded-3" style="height: 50vh;">
+                                <div class="card border-0 shadow rounded-3" style="height: 100%;">
                                     <div class="card-body">
                                         <h5 class="card-title">Purchases</h5>
-
+                                        <div class="table-responsive pl-table pt-2">
+                                            <table class="table table-hover">
+                                                <thead>
+                                                    <tr>
+                                                      <th scope="col">SR#</th>
+                                                      <th scope="col">INVOICE NO#</th>
+                                                      <th scope="col">TOTAL PAY</th>
+                                                    </tr>
+                                                  </thead>
+                                                  <tbody>
+                                                    <tr>
+                                                        <th scope="row">1</th>
+                                                        <td>INV001</td>
+                                                        <td class="curr">1200000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">2</th>
+                                                        <td>INV002</td>
+                                                        <td class="curr">1500000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">3</th>
+                                                        <td>INV003</td>
+                                                        <td class="curr">1800000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">4</th>
+                                                        <td>INV004</td>
+                                                        <td class="curr">1400000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <th scope="row">5</th>
+                                                        <td>INV005</td>
+                                                        <td class="curr">1400000</td>
+                                                    </tr>
+                                                </tbody>
+                                              </table>
+                                        </div>
+                                        <div>
+                                            <a class= "view_more_btn btn btn-outline-primary" href="#">VIEW ALL</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -712,23 +856,23 @@
 
                         </div>
                         <div class="dashboard-container">
-                            <div class="card line-chart">
+                            <div class="room-container card line-chart">
                                 <h2>Average Room Rate</h2>
                                 <canvas id="lineChart"></canvas>
                             </div>
-                            <div class="card pie-chart">
+                            <div class="room-container card pie-chart">
                                 <h2>Occupancy rate</h2>
                                 <canvas id="pieChart"></canvas>
                             </div>
-                            <div class="card controls">
+                            <div class="room-container card controls">
                                 <h2>Average Room Rate</h2>
                                 <h1>$40</h1>
-                                <label><input type="checkbox"> Show Revenue Including VAT</label><br>
-                                <label><input type="checkbox"> Exclude Non-Accommodation Revenue</label>
+                                <label><input id="show_revenue_checkbox" type="checkbox"> Show Revenue Including VAT</label><br>
+                                <label><input  id ="exclude_revenue_checkbox" type="checkbox"> Exclude Non-Accommodation Revenue</label>
                                 <p>Occupancy: 0.00%</p>
                                 <p>RevPAR: £0.00</p>
                             </div>
-                            <div class="card property-list">
+                            <div class="room-container card property-list">
                                 <h2>Registered Child Properties</h2>
                                 <div class="table-responsive">
                                     <table>

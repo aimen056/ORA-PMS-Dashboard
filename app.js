@@ -160,4 +160,45 @@ document.addEventListener("DOMContentLoaded", function () {
             alert('Please enter a valid tax rate.');
         }
     });
+
+
+    //PROFIT LOSS TABLE SIGNS
+    const elements = document.querySelectorAll('.pl-curr');
+    
+    elements.forEach(function(td) {
+        let value = parseInt(td.getAttribute('data-value'), 10);
+        
+        // check if value is positive or negative
+        if (value > 0) {
+            td.classList.add('profit');
+            td.textContent = `+$${value.toLocaleString()}`;
+        } else if (value < 0) {
+            td.classList.add('loss');
+            td.textContent = `-$${Math.abs(value).toLocaleString()}`;
+        }
+    });
+
+
+    //sales anaylis percent
+    const percentCells = document.querySelectorAll('#payment-table .p-change');
+
+    percentCells.forEach(cell => {
+            //find prev and curr vall
+        const prevCell = cell.previousElementSibling.previousElementSibling;
+        const currentCell = cell.previousElementSibling;
+        
+        //fetch prev curr
+        const prevValue = parseFloat(prevCell.getAttribute('data-prev'));
+        const currentValue = parseFloat(currentCell.getAttribute('data-curr'));
+        
+        const percentChange = ((currentValue - prevValue) / prevValue) * 100;
+        
+        cell.textContent = `${Math.abs(percentChange).toFixed(2)}%`;
+
+        if (percentChange >= 0) {
+            cell.classList.add('profit');
+        } else {
+            cell.classList.add('loss');
+        }
+    });
 });
