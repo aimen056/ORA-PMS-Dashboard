@@ -1,14 +1,54 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Dropdown toggle functionality
     var dropdowns = document.getElementsByClassName("dropdown-btn");
-    for (var i = 0; i < dropdowns.length; i++) {
-        dropdowns[i].addEventListener("click", function () {
-            this.classList.toggle("active");
-            var dropdownContent = this.nextElementSibling;
+for (var i = 0; i < dropdowns.length; i++) {
+    dropdowns[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        
+        // Use nextElementSibling to select the dropdown-container
+        var dropdownContent = this.nextElementSibling;
+        
+        if (dropdownContent && dropdownContent.classList.contains("dropdown-container")) {
             dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
-        });
-    }
+        }
+    });
+}
 
+
+    //toggle sidebar
+document.getElementById('sidebarToggleBtn').addEventListener('click', function () {
+    const sidebar = document.getElementById('sidebar');
+    const isCollapsed = sidebar.style.width === '60px';
+
+    // Toggle sidebar state
+    sidebar.style.width = isCollapsed ? '215px' : '60px';
+    sidebar.querySelector('#sidebarLogo').style.display = isCollapsed ? 'inline-block' : 'none';
+    sidebar.querySelector('#sidebar-title').style.display = isCollapsed ? 'inline' : 'none';
+    sidebar.querySelectorAll('.sidebar-text').forEach(text => text.style.display = isCollapsed ? 'inline' : 'none');
+    document.getElementById('sidebarToggleIcon').textContent = isCollapsed ? 'chevron_left' : 'chevron_right';
+    document.getElementById('main-content').style.marginLeft = isCollapsed ? '215px' : '60px';
+});
+
+// Handle automatic collapse on window resize
+function handleResize() {
+    const isSmallViewport = window.matchMedia('(max-width: 768px)').matches;
+    const sidebar = document.getElementById('sidebar');
+    const isCollapsed = isSmallViewport || sidebar.style.width === '60px';
+
+    sidebar.style.width = isCollapsed ? '60px' : '215px';
+    sidebar.querySelector('#sidebarLogo').style.display = isCollapsed ? 'none' : 'inline-block';
+    sidebar.querySelector('#sidebar-title').style.display = isCollapsed ? 'none' : 'inline';
+    sidebar.querySelectorAll('.sidebar-text').forEach(text => text.style.display = isCollapsed ? 'none' : 'inline');
+    document.getElementById('sidebarToggleIcon').textContent = isCollapsed ? 'chevron_right' : 'chevron_left';
+    document.getElementById('main-content').style.marginLeft = isCollapsed ? '60px' : '215px';
+}
+
+window.addEventListener('resize', handleResize);
+handleResize(); // Initial check
+
+
+
+    
     //tooltip for icons
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
         var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
@@ -22,17 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     
-    // Sidebar toggle functionality
-    var toggleButton = document.getElementById("toggleSidebar");
-    var sidebar = document.getElementById("sidebar");
-
-    if (toggleButton && sidebar) {
-        toggleButton.addEventListener("click", function () {
-            sidebar.classList.toggle("d-none");
-        });
-    } else {
-        console.error("Toggle button or sidebar not found!");
-    }
 
     // Currency formatting
     let currencyElements = document.querySelectorAll(".curr");

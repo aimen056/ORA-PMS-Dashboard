@@ -53,208 +53,140 @@
 
 <body style="background-color:#F1FAEE;; font-family: 'Inter', sans-serif; font-size: 1rem;">
     <div class="d-flex">
-        <aside id="sidebar" class="sidebar-toggle d-none d-md-block collapse"
-            style="position: fixed; top: 0; left: 0; z-index: 1; height: 100vh; width: 215px;  background-color: #1D3557; left: 0; top: 0; overflow-x: hidden; padding-top: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+        <aside id="sidebar" class="collapsed" style="position: fixed; top: 0; left: 0; z-index: 1; min-height: 100%; width: 215px; background-color: #1D3557; left: 0; top: 0; overflow-x: hidden; padding-top: 20px; display: flex; flex-direction: column; justify-content: space-between;">
             <div>
-                <div class="d-flex justify-content-between"
-                    style="color: white; font-size: 20px; font-weight: bold; margin-bottom: 30px; display: flex; align-items: center;">
-                    <img src="#" style="width: 40px; height: 40px; margin-right: 10px;">
-                    ORAPMS
-                    <!-- Add Collapse Button Inside Sidebar -->
-                    <!--<span>
-                        <button class="btn" type="button" style="margin-left: 10px;">
-                            <span class="material-symbols-outlined" style="color: #ffffff;">
-                                dock_to_right
-                            </span>
-                        </button>
-                    </span>-->
+                <div class="d-flex justify-content-between" style="color: white; font-size: 20px; font-weight: bold; margin-bottom: 30px; display: flex; align-items: center;">
+                    <img id="sidebarLogo" src="./Icons/logo.png" style="height: 36px; width: 36px; display: inline-block;">
+                    <span id="sidebar-title" style="display: inline;">ORAPMS</span>
+                    <button id="sidebarToggleBtn" class="btn" type="button" style="margin-left: 10px;">
+                        <span id="sidebarToggleIcon" class="material-symbols-outlined" style="color: #ffffff;">
+                            chevron_left
+                        </span>
+                    </button>
                 </div>
-
-                <input id="search_bar" type="text" placeholder="Search...."
-                    style="width: 90%; padding: 5px; margin-bottom: 5px; border-radius: 5px; border: none;">
-                <a href="#dashboard"
-                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;transition: background-color 0.3s;">
-                    <span class="material-icons" style="margin-right: 10px;">dashboard</span>
-                    Dashboard
+                <a href="#dashboard" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;" >
+                    <span class="material-icons" style="margin-right: 10px;" data-bs-toggle="tooltip" data-bs-placement="right" title="Dashboard">dashboard</span>
+                    <span class="sidebar-text" style="display: inline;">Dashboard</span>
                 </a>
-
-                <a href="#checkin"
-                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;">
-                    <span class="material-icons" style="margin-right: 10px;">login</span>
-                    Check-in
+                <a href="#checkin" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;" >
+                    <span class="material-icons" style="margin-right: 10px;" data-bs-toggle="tooltip" data-bs-placement="right" title="Check-in">login</span>
+                    <span class="sidebar-text" style="display: inline;">Check-in</span>
                 </a>
-
-                <a href="#reservation"
-                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;">
-                    <span class="material-icons" style="margin-right: 10px;">event</span>
-                    Reservations
+                <a href="#reservation" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;" >
+                    <span class="material-icons" style="margin-right: 10px;" data-bs-toggle="tooltip" data-bs-placement="right" title="Reservations">event</span>
+                    <span class="sidebar-text" style="display: inline;">Reservations</span>
                 </a>
-
-                <a href="#addproperty"
-                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;">
-                    <span class="material-icons" style="margin-right: 10px;">add_business</span>
-                    Add Property
+                <a href="#addproperty" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;" >
+                    <span class="material-icons" style="margin-right: 10px;" data-bs-toggle="tooltip" data-bs-placement="right" title="Add Property">add_business</span>
+                    <span class="sidebar-text" style="display: inline;">Add Property</span>
                 </a>
-
-                <a href="#calendar"
-                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;">
-                    <span class="material-icons" style="margin-right: 10px;">calendar_today</span>
-                    Calendar
+                <a href="#calendar" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;">
+                    <span class="material-icons" style="margin-right: 10px;"  data-bs-toggle="tooltip" data-bs-placement="right" title="Calendar">calendar_today</span>
+                    <span class="sidebar-text" style="display: inline;">Calendar</span>
                 </a>
-
-                <a href="#restaurant"
-                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;">
-                    <span class="material-icons" style="margin-right: 10px;">restaurant_menu</span>
-                    Restaurant
+                <a href="#restaurant" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;" >
+                    <span class="material-icons" style="margin-right: 10px;" data-bs-toggle="tooltip" data-bs-placement="right" title="Restaurant">restaurant_menu</span>
+                    <span class="sidebar-text" style="display: inline;">Restaurant</span>
                 </a>
-
-                <a href="#Room categories"
-                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;">
-                    <span class="material-icons" style="margin-right: 10px;">hotel</span>
-                    Room Categories
+                <a href="#Room categories" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; display: flex; align-items: center;">
+                    <span class="material-icons" style="margin-right: 10px;"  data-bs-toggle="tooltip" data-bs-placement="right" title="Room Categories">hotel</span>
+                    <span class="sidebar-text" style="display: inline;">Room Categories</span>
                 </a>
-
-                <button class="dropdown-btn"
-                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; background: none; border: none; width: 100%; text-align: left; cursor: pointer; outline: none; display: flex; align-items: center; justify-content: space-between;">
+                <button class="dropdown-btn" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; background: none; border: none; width: 100%; text-align: left; cursor: pointer; outline: none; display: flex; align-items: center; justify-content: space-between; position: relative;" >
                     <div style="display: flex; align-items: center;">
-                        <span class="material-icons" style="margin-right: 10px;">account_balance_wallet</span>
-                        Accounts
+                        <span class="material-icons" style="margin-right: 10px;" data-bs-toggle="tooltip" data-bs-placement="right" title="Accounts">account_balance_wallet</span>
+                        <span class="sidebar-text" style="display: inline;">Accounts</span>
                     </div>
-                    <span class="material-icons">expand_more</span>
+                    <span class="material-icons sidebar-text" style="margin-left: auto;">expand_more</span>
                 </button>
                 <div class="dropdown-container" style="display: none; background-color: #274772;">
-                    <a href="#Cashbook"
-                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Cashbook
-                        (Acc)</a>
+                    <a href="#Cashbook" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Cashbook (Acc)</a>
                 </div>
-
-                <button class="dropdown-btn"
-                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; background: none; border: none; width: 100%; text-align: left; cursor: pointer; outline: none; display: flex; align-items: center; justify-content: space-between;">
+        
+                <button class="dropdown-btn" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; background: none; border: none; width: 100%; text-align: left; cursor: pointer; outline: none; display: flex; align-items: center; justify-content: space-between; position: relative;" >
                     <div style="display: flex; align-items: center;">
-                        <span class="material-icons" style="margin-right: 10px;">corporate_fare</span>
-                        Inventory
+                        <span class="material-icons" style="margin-right: 10px;" data-bs-toggle="tooltip" data-bs-placement="right" title="Inventory">corporate_fare</span>
+                        <span class="sidebar-text" style="display: inline;">Inventory</span>
                     </div>
-                    <span class="material-icons">expand_more</span>
+                    <span class="material-icons sidebar-text" style="margin-left: auto;">expand_more</span>
                 </button>
                 <div class="dropdown-container" style="display: none; background-color: #274772;">
-                    <a href="#Addlaundry"
-                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Add
-                        laundry</a>
-                    <a href="#Suppliers"
-                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Suppliers</a>
-                    <a href="#Purchasing"
-                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Purchasing</a>
-                    <a href="#ItemCreation"
-                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Item
-                        creation</a>
-                    <a href="#LaundryOut"
-                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Laundry
-                        Out</a>
-                    <a href="#LaundryIn"
-                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Laundry
-                        In</a>
-                    <a href="#Inventory Issuance"
-                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Inventory
-                        Issuance</a>
+                    <a href="#Addlaundry" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Add laundry</a>
+                    <a href="#Suppliers" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Suppliers</a>
+                    <a href="#Purchasing" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Purchasing</a>
+                    <a href="#ItemCreation" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Item creation</a>
+                    <a href="#LaundryOut" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Laundry Out</a>
+                    <a href="#LaundryIn" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Laundry In</a>
+                    <a href="#InventoryIssuance" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Inventory Issuance</a>
                 </div>
-
-                <button class="dropdown-btn"
-                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; background: none; border: none; width: 100%; text-align: left; cursor: pointer; outline: none; display: flex; align-items: center; justify-content: space-between;">
+        
+                <button class="dropdown-btn" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; background: none;
+                 border: none; width: 100%; text-align: left; cursor: pointer; outline: none; display: flex; align-items: center;
+                  justify-content: space-between; position: relative;" >
                     <div style="display: flex; align-items: center;">
-                        <span class="material-icons" style="margin-right: 10px;">add_home_work</span>
-                        Property
+                        <span class="material-icons" style="margin-right: 10px;" data-bs-toggle="tooltip" data-bs-placement="right" title="Property">home</span>
+                        <span class="sidebar-text" style="display: inline;">Property</span>
                     </div>
-                    <span class="material-icons">expand_more</span>
-                </button>
-                <div class="dropdown-container" style="display: none; background-color:#274772;">
-                    <a href="#Expense Category"
-                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Expense
-                        Category </a>
-                    <a href="#Expenses"
-                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Expenses
-                    </a>
-                    <a href="#Cashbook"
-                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Cashbook
-                    </a>
-                </div>
-
-                <button class="dropdown-btn"
-                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; background: none; border: none; width: 100%; text-align: left; cursor: pointer; outline: none; display: flex; align-items: center; justify-content: space-between;">
-                    <div style="display: flex; align-items: center;">
-                        <span class="material-icons" style="margin-right: 10px;">add_chart</span>
-                        Reports
-                    </div>
-                    <span class="material-icons">expand_more</span>
+                    <span class="material-icons sidebar-text" style="margin-left: auto;">expand_more</span>
                 </button>
                 <div class="dropdown-container" style="display: none; background-color: #274772;">
-                    <a href="#ReservationList"
-                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Reservation
-                        list </a>
-                    <a href="#CustomerDetails"
-                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Customer
-                        Details</a>
-                    <a href="#Reports"
-                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Reports
-                    </a>
-                    <a href="#Reportstochild"
-                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Reports
-                        to child </a>
+                    <a href="#AddProperty" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Add Property</a>
+                    <a href="#PropertyList" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Property List</a>
                 </div>
-
-                <button class="dropdown-btn"
-                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; background: none; border: none; width: 100%; text-align: left; cursor: pointer; outline: none; display: flex; align-items: center; justify-content: space-between;">
+        
+                <button class="dropdown-btn" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; background: none; border: none; width: 100%; text-align: left; 
+                cursor: pointer; outline: none; display: flex; align-items: center; justify-content: space-between; position: relative;">
                     <div style="display: flex; align-items: center;">
-                        <span class="material-icons" style="margin-right: 10px;">home</span>
-                        Room
+                        <span class="material-icons" style="margin-right: 10px;"  data-bs-toggle="tooltip" data-bs-placement="right" title="Reports">bar_chart</span>
+                        <span class="sidebar-text" style="display: inline;">Reports</span>
                     </div>
-                    <span class="material-icons">expand_more</span>
+                    <span class="material-icons sidebar-text" style="margin-left: auto;">expand_more</span>
                 </button>
                 <div class="dropdown-container" style="display: none; background-color: #274772;">
-                    <a href="#Addquestions"
-                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Add
-                        Questions </a>
-                    <a href="#Housekeeping"
-                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Housekeeping</a>
-                    <a href="#Maintenance"
-                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Maintenance</a>
-                    <a href="#RoomSharing"
-                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Room
-                        Sharing</a>
+                    <a href="#DailySales" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Daily Sales</a>
+                    <a href="#MonthlySales" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Monthly Sales</a>
+                    <a href="#RoomOccupancy" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Room Occupancy</a>
+                    <a href="#RevenueReport" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Revenue Report</a>
+                    <a href="#ExpenseReport" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Expense Report</a>
+                    <a href="#OverallPerformance" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Overall Performance</a>
                 </div>
-
-                <button class="dropdown-btn"
-                    style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; background: none; border: none; width: 100%; text-align: left; cursor: pointer; outline: none; display: flex; align-items: center; justify-content: space-between;">
+        
+                <button class="dropdown-btn" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; background: none; border: none; width: 100%; text-align: left; cursor: pointer; outline: none; display: flex; align-items: center; justify-content: space-between; position: relative;" >
                     <div style="display: flex; align-items: center;">
-                        <span class="material-icons" style="margin-right: 10px;">person</span>
-                        User
+                        <span class="material-icons" style="margin-right: 10px;" data-bs-toggle="tooltip" data-bs-placement="right" title="Room">meeting_room</span>
+                        <span class="sidebar-text" style="display: inline;">Room</span>
                     </div>
-                    <span class="material-icons">expand_more</span>
+                    <span class="material-icons sidebar-text" style="margin-left: auto;">expand_more</span>
                 </button>
                 <div class="dropdown-container" style="display: none; background-color: #274772;">
-                    <a href="#Createuser"
-                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Create
-                        User </a>
-                    <a href="#Userpages"
-                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">User
-                        Pages</a>
-                    <a href="#Empregistration"
-                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Emp
-                        Registration</a>
-                    <a href="#Payroll"
-                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Payroll</a>
-                    <a href="#Emp Attendance"
-                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Emp
-                        Attendance</a>
-                    <a href="#Child pages"
-                        style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Child
-                        Pages</a>
+                    <a href="#RoomList" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Room List</a>
+                    <a href="#RoomAvailability" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Room Availability</a>
+                    <a href="#RoomRates" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Room Rates</a>
+                </div>
+        
+                <button class="dropdown-btn" style="padding: 10px 15px; text-decoration: none; font-size: 1rem; color: #ffffff; background: none; border: none; width: 100%; text-align: left; cursor: pointer; outline: none; display: flex; align-items: center; 
+                justify-content: space-between; position: relative;" >
+                    <div style="display: flex; align-items: center;">
+                        <span class="material-icons" style="margin-right: 10px;" data-bs-toggle="tooltip" data-bs-placement="right" title="User">person</span>
+                        <span class="sidebar-text" style="display: inline;">User</span>
+                    </div>
+                    <span class="material-icons sidebar-text" style="margin-left: auto;">expand_more</span>
+                </button>
+                <div class="dropdown-container" style="display: none; background-color: #274772;">
+                    <a href="#UserList" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">User List</a>
+                    <a href="#Roles" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Roles</a>
+                    <a href="#Permissions" style="padding: 10px 30px; text-decoration: none; font-size: 1rem; color: #ffffff; display: block;">Permissions</a>
                 </div>
             </div>
-
+            <div style="padding: 10px; background-color: #274772;">
+                <a href="#logout" style="text-decoration: none; color: #ffffff; display: flex; align-items: center;">
+                    <span class="material-icons" style="margin-right: 10px;" data-bs-toggle="tooltip" data-bs-placement="right" title="User">logout</span>
+                    <span class="sidebar-text" style="display: inline;">Logout</span>
+                </a>
+            </div>
         </aside>
-
         <!-- Main Component -->
-        <div class="main container-fluid" style="margin-left: 215px;">
+        <div id="main-content" class="main container-fluid">
             <!-- Navbar Section -->
             <nav class="navbar navbar-expand border-bottom" style="padding: 5px 0; background-color: #F1FAEE;">
                 <div class="d-flex align-items-center position-relative w-100" style="height: 80px;">
@@ -269,14 +201,7 @@
                             </ol>
                         </nav>
                     </div>
-                    <div class="col-2 d-md-none">
-                        <button id="toggleSidebar" class="btn" type="button" data-toggle="collapse"
-                            data-target="#sidebar" aria-expanded="false" aria-controls="sidebar">
-                            <span class="material-symbols-outlined">
-                                dock_to_right
-                            </span>
-                        </button>
-                    </div>
+
 
                     <!-- Time, Day, and Date -->
                     <div class="text-center d-flex justify-content-center align-items-center mx-auto">
