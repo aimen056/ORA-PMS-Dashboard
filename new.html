@@ -920,19 +920,20 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 g-4 text-center">
+                        <div class="row row-cols-1 row-cols-md-1 row-cols-lg-1 row-cols-xl-2 g-4 text-center">
                             <div class="col">
-                                <div class="card border-0 shadow rounded-3" style="height: 400px">
+                                <div class="card border-0 shadow rounded-3" style=" height:400px;">
                                     <div class="card-body">
                                         <h5 class="card-title">Latest 10 Reservations</h5>
-                                        <div class="table-responsive  table1 pt-2 "   style="height: 300px;">
-                                            <table class="table table-hover" id="reservation-table">
+                                        <div class="table-responsive table1 pt-2 "  style="max-height: 300px; overflow-y: auto;">
+                                            <table class="table table-hover" id="payment-table">
                                                 <thead>
                                                     <tr>
                                                         <th scope="col">SR#</th>
                                                         <th scope="col">GENDER</th>
                                                         <th scope="col">GUEST NAME</th>
                                                         <th scope="col">CONTACT</th>
+                                                        <th scope="col">AGENCY</th>
                                                         <th scope="col">SOURCE</th>
                                                         <th scope="col">ARRIVAL</th>
 
@@ -944,6 +945,7 @@
                                                         <td>Male</td>
                                                         <td>Ali Khan</td>
                                                         <td>0300 1234567</td>
+                                                        <td>Trivelles</td>
                                                         <td>Online</td>
                                                         <td>2024-08-01</td>
                                                     </tr>
@@ -952,6 +954,7 @@
                                                         <td>Female</td>
                                                         <td>Fatima Ali</td>
                                                         <td>0301 2345678</td>
+                                                        <td>Serena</td>
                                                         <td>Walk-in</td>
                                                         <td>2024-08-05</td>
                                                     </tr>
@@ -960,6 +963,7 @@
                                                         <td>Male</td>
                                                         <td>Ahmed Raza</td>
                                                         <td>0302 3456789</td>
+                                                        <td>Marriott</td>
                                                         <td>Online</td>
                                                         <td>2024-08-10</td>
                                                     </tr>
@@ -968,6 +972,7 @@
                                                         <td>Female</td>
                                                         <td>Ayesha Khan</td>
                                                         <td>0303 4567890</td>
+                                                        <td>PC</td>
                                                         <td>Walk-in</td>
                                                         <td>2024-08-15</td>
                                                     </tr>
@@ -976,6 +981,7 @@
                                                         <td>Male</td>
                                                         <td>Usman Khan</td>
                                                         <td>0304 5678901</td>
+                                                        <td>Avari</td>
                                                         <td>Online</td>
                                                         <td>2024-08-20</td>
                                                     </tr>
@@ -984,6 +990,7 @@
                                                         <td>Female</td>
                                                         <td>Sara Ali</td>
                                                         <td>0305 6789012</td>
+                                                        <td>Hotel One</td>
                                                         <td>Walk-in</td>
                                                         <td>2024-08-25</td>
                                                     </tr>
@@ -992,6 +999,7 @@
                                                         <td>Male</td>
                                                         <td>Bilal Hashim</td>
                                                         <td>0306 7890123</td>
+                                                        <td>Hotel One</td>
                                                         <td>Online</td>
                                                         <td>2024-08-30</td>
                                                     </tr>
@@ -1000,6 +1008,7 @@
                                                         <td>Female</td>
                                                         <td>Maira Khan</td>
                                                         <td>0307 8901234</td>
+                                                        <td>Hotel One</td>
                                                         <td>Walk-in</td>
                                                         <td>2024-09-02</td>
                                                     </tr>
@@ -1008,6 +1017,7 @@
                                                         <td>Male</td>
                                                         <td>Hassan Ali</td>
                                                         <td>0308 9012345</td>
+                                                        <td>Marriott</td>
                                                         <td>Online</td>
                                                         <td>2024-09-07</td>
                                                     </tr>
@@ -1016,6 +1026,7 @@
                                                         <td>Female</td>
                                                         <td>Amna Abid</td>
                                                         <td>0309 0123456</td>
+                                                        <td>Serena</td>
                                                         <td>Walk-in</td>
                                                         <td>2024-09-10</td>
                                                     </tr>
@@ -1028,7 +1039,7 @@
                             </div>
 
                             <div class="col">
-                                <div class="card border-0 shadow rounded-3" style="height: 400px;">
+                                <div class="card border-0 shadow rounded-3" style=" height:400px;">
                                     <div class="card-body">
                                         <h5 class="card-title">Bookings</h5>
                                         <div class="chart-container">
@@ -1049,7 +1060,7 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="card border-0 shadow rounded-3" style="height:400px;">
+                                <div class="card border-0 shadow rounded-3" style=" height:400px;">
                                     <div class="card-body">
                                         <h5 class="card-title">My Tasks</h5>
                                          <div class="table-responsive  table1 pt-2 "  style="max-height: 300px; overflow-y: auto;">
@@ -1108,11 +1119,11 @@
                                 <div class="card border-0 shadow rounded-3" style=" height:400px;">
                                     <div class="card-body">
                                         <h5 class="card-title">Failed Payments (Last 24 Hours)</h5>
-                                        <div class="table-responsive  table1 pt-2 "   style="max-height: 300px;">
-                                            <table class="table table-hover">
+                                        <div class="table-responsive table1 pt-2 "  style="max-height: 300px;">
+                                            <table class="table table-hover" id="payment-table">
                                                 <thead>
                                                     <tr>
-                                                        <th scope="col">RES. ID</th>
+                                                        <th scope="col">Reservation ID</th>
                                                         <th scope="col">GUEST NAME</th>
                                                         <th scope="col">PAYMENT METHOD</th>
                                                         <th scope="col">AMOUNT</th>
@@ -1122,35 +1133,35 @@
                                                 </thead>
                                                 <tbody>
                                                     <tr>
-                                                        <td>01</td>
+                                                        <td>001</td>
                                                         <td>Ali Khan</td>
                                                         <td>Credit Card</td>
-                                                        <td>15000</td>
+                                                        <td>15,000</td>
                                                         <td>Insufficient Funds</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>02</td>
+                                                        <td>002</td>
                                                         <td>Fatima Ali</td>
                                                         <td>Credit Card</td>
                                                         <td>20000</td>
                                                         <td>Card Declined</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>03</td>
+                                                        <td>003</td>
                                                         <td>Ahmed Raza</td>
                                                         <td>Bank Transfer</td>
                                                         <td>PKR 18000</td>
                                                         <td>Network Error</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>04</td>
+                                                        <td>004</td>
                                                         <td>Ayesha Khan</td>
                                                         <td>Debit Card</td>
                                                         <td>25000</td>
                                                         <td>Expired Card</td>
                                                     </tr>
                                                     <tr>
-                                                        <td>05</td>
+                                                        <td>005</td>
                                                         <td>Usman Ali</td>
                                                         <td>Bank Transfer</td>
                                                         <td>12,000</td>
@@ -1231,7 +1242,6 @@
                                 </div>
                             </div>
                         </div>
-                        
 
                     </div>
                     <div class="tab-pane fade" id="room" role="tabpanel" aria-labelledby="room_tab">
