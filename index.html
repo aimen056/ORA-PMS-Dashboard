@@ -14,20 +14,22 @@
 
     <!--NOT USING-->
     <!--bootstrap-->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
         crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-uEYzCn7WpB8xTsdh4HhLJtD+YtXt8iDzGqI/0c2w3XKTShMbvUCghc1SUtqbT40f"
-        crossorigin="anonymous"></script>
-
 
     <!--icons-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -43,6 +45,8 @@
 
     <!--css file-->
     <link rel="stylesheet" href="style.css">
+
+
 
     <title>ORA PMS</title>
 </head>
@@ -520,14 +524,14 @@
                             </div>
 
                         </div>
-                        <div class="row row-cols-1 row-cols-md-1 row-cols-xl-2 g-4 text-center">
+                        <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 g-4 text-center">
                             <div class="col">
-                                <div class="card border-0 shadow rounded-3" style="height: 100%;">
+                                <div class="card border-0 shadow rounded-3" style="height: 400px">
                                     <div class="card-body">
-                                        <h5 class="card-title">Profit/Loss</h5>
-                                        <div class="table-responsive pl-table pt-2">
+                                        <h4 class="card-title">Profit/Loss</h4>
+                                        <div class="table-responsive table1 pt-2">
                                             <table class="table table-hover">
-                                                <thead>
+                                                <thead class="table-header">
                                                     <tr>
                                                         <th scope="col">SR#</th>
                                                         <th scope="col">MONTH</th>
@@ -542,39 +546,40 @@
                                                         <td>January</td>
                                                         <td class="curr">1200000</td>
                                                         <td class="curr">800000</td>
-                                                        <td class="pl-curr" data-value="400000 ">400000</td>
+                                                        <td class="pl-curr inc" data-value="400000">+400,000</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">2</th>
                                                         <td>February</td>
                                                         <td class="curr">1500000</td>
                                                         <td class="curr">1200000</td>
-                                                        <td class="pl-curr" data-value="-300000"></td>
+                                                        <td class="pl-curr dec" data-value="-300000">-300,000</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">3</th>
                                                         <td>March</td>
                                                         <td class="curr">1800000</td>
                                                         <td class="curr">1400000</td>
-                                                        <td class="pl-curr" data-value="400000 "></td>
+                                                        <td class="pl-curr inc" data-value="400000">+400,000</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">4</th>
                                                         <td>April</td>
                                                         <td class="curr">1400000</td>
                                                         <td class="curr">1600000</td>
-                                                        <td class="pl-curr" data-value="-200000"></td>
+                                                        <td class="pl-curr dec" data-value="-200000">-200,000</td>
                                                     </tr>
                                                     <tr>
                                                         <th scope="row">5</th>
                                                         <td>May</td>
                                                         <td class="curr">1400000</td>
                                                         <td class="curr">1600000</td>
-                                                        <td class="pl-curr" data-value="-900000"></td>
+                                                        <td class="pl-curr dec" data-value="-900000">-900,000</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
                                         </div>
+                                        
                                         <div>
                                             <a class="view_more_btn btn btn-outline-primary" href="#">VIEW ALL</a>
                                         </div>
@@ -583,9 +588,9 @@
                             </div>
 
                             <div class="col">
-                                <div class="card border-0 shadow rounded-3" style="height: 100%;">
+                                <div class="card border-0 shadow rounded-3" style="height: 400px;">
                                     <div class="card-body">
-                                        <h5 class="card-title">Revenue & Expense</h5>
+                                        <h4 class="card-title">Revenue & Expense</h4>
                                         <div class="chart-container">
                                             <canvas id="comboChart"></canvas>
                                         </div>
@@ -595,10 +600,10 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="card border-0 shadow rounded-3" style="height: 100%;">
+                                <div class="card border-0 shadow rounded-3" style=" height:400px;">
                                     <div class="card-body">
-                                        <h5 class="card-title">Sales Analysis</h5>
-                                        <div class="table-responsive pl-table pt-2 ">
+                                        <h4 class="card-title">Sales Analysis</h4>
+                                        <div class="table-responsive table1 pt-2 ">
                                             <table class="table table-hover" id="payment-table">
                                                 <thead>
                                                     <tr>
@@ -649,10 +654,10 @@
                                 </div>
                             </div>
                             <div class="col">
-                                <div class="card border-0 shadow rounded-3" style="height: 100%;">
+                                <div class="card border-0 shadow rounded-3" style="height:400px;">
                                     <div class="card-body">
-                                        <h5 class="card-title">Purchases</h5>
-                                        <div class="table-responsive pl-table pt-2">
+                                        <h4 class="card-title">Purchases</h4>
+                                        <div class="table-responsive table1 pt-2">
                                             <table class="table table-hover">
                                                 <thead>
                                                     <tr>
@@ -699,7 +704,398 @@
                         </div>
                     </div>
                     <div class="tab-pane fade" id="reservation" role="tabpanel" aria-labelledby="reservation-tab">
-                        <h1>this is reservation</h1>
+                        <div class="container-fluid p-3 mb-4 shadow-bottom bg-white rounded-bottom">
+                            <div class="container-fluid border mt-2 mb-2 rounded">
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom hover-box">
+                                        <div class="row pt-2 pb-2">
+                                            <div class="col-md-2 col-2 icon-wrapper">
+                                                <i class="material-icons" style="color: #FAA916;">
+                                                    hotel
+                                                </i>
+                                            </div>
+                                            <div class="sm-box-title col-md-10 col-10">
+                                                Today's Check-ins
+                                            </div>
+                                        </div>
+                                        <div class="row p-4">
+                                            <span class="sm-box-num text-center text-align">
+                                                0
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom hover-box">
+                                        <div class="row pt-2 pb-2">
+                                            <div class="col-md-2 col-2 icon-wrapper">
+                                                <i class="material-icons" style="color: #FAA916;">
+                                                    check_circle
+                                                </i>
+                                            </div>
+                                            <div class="sm-box-title col-md-10 col-10">
+                                                Checked-in
+                                            </div>
+                                        </div>
+                                        <div class="row p-4">
+                                            <span class="sm-box-num text-center text-align">
+                                                0
+                                            </span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom hover-box">
+                                        <div class="row pt-2 pb-2">
+                                            <div class="col-md-2 col-2 icon-wrapper">
+                                                <i class="material-icons" style="color: #FAA916;">
+                                                    exit_to_app
+                                                </i>
+                                            </div>
+                                            <div class="sm-box-title col-md-10 col-10">
+                                                Checkouts
+                                            </div>
+                                        </div>
+                                        <div class="row p-4">
+                                            <span class="sm-box-num text-center text-align">
+                                                0
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-bottom hover-box">
+                                        <div class="row pt-2 pb-2">
+                                            <div class="col-md-2 col-2 icon-wrapper">
+                                                <i class="material-icons" style="color: #FAA916;">
+                                                    hotel_class
+                                                </i>
+                                            </div>
+                                            <div class="sm-box-title col-md-10 col-10">
+                                                Occupied Rooms
+                                            </div>
+                                        </div>
+                                        <div class="row p-4">
+                                            <span class="sm-box-num text-center text-align">
+                                                17
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom hover-box">
+                                        <div class="row pt-2 pb-2">
+                                            <div class="col-md-2 col-2 icon-wrapper">
+                                                <i class="material-icons" style="color: #FAA916;">
+                                                    calendar_today
+                                                </i>
+                                            </div>
+                                            <div class="sm-box-title col-md-10 col-10">
+                                                Total Reservations
+                                            </div>
+                                        </div>
+                                        <div class="row p-4">
+                                            <span class="sm-box-num text-center text-align">
+                                                15
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom hover-box">
+                                        <div class="row pt-2 pb-2">
+                                            <div class="col-md-2 col-2 icon-wrapper">
+                                                <i class="material-icons" style="color: #FAA916;">
+                                                    cancel
+                                                </i>
+                                            </div>
+                                            <div class="sm-box-title col-md-10 col-10">
+                                                No Shows
+                                            </div>
+                                        </div>
+                                        <div class="row p-4">
+                                            <span class="sm-box-num text-center text-align">
+                                                17
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom hover-box">
+                                        <div class="row pt-2 pb-2">
+                                            <div class="col-md-2 col-2 icon-wrapper">
+                                                <i class="material-icons" style="color: #FAA916;">
+                                                    cancel_presentation
+                                                </i>
+                                            </div>
+                                            <div class="sm-box-title col-md-10 col-10">
+                                                Cancellations
+                                            </div>
+                                        </div>
+                                        <div class="row p-4">
+                                            <span class="sm-box-num text-center text-align">
+                                                17
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-bottom hover-box">
+                                        <div class="row pt-2 pb-2">
+                                            <div class="col-md-2 col-2 icon-wrapper">
+                                                <i class="material-icons" style="color: #FAA916;">
+                                                    directions_walk
+                                                </i>
+                                            </div>
+                                            <div class="sm-box-title col-md-10 col-10">
+                                                Walk-ins
+                                            </div>
+                                        </div>
+                                        <div class="row p-4">
+                                            <span class=" sm-box-num text-center text-align">
+                                                38
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom hover-box">
+                                        <div class="row pt-2 pb-2">
+                                            <div class="col-md-2 col-2 icon-wrapper">
+                                                <i class="material-icons" style="color: #FAA916;">
+                                                    booking
+                                                </i>
+                                            </div>
+                                            <div class="sm-box-title col-md-10 col-10">
+                                                Booking.com
+                                            </div>
+                                        </div>
+                                        <div class="row p-4">
+                                            <span class="sm-box-num text-center text-align">
+                                                15
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom hover-box">
+                                        <div class="row pt-2 pb-2">
+                                            <div class="col-md-2 col-2 icon-wrapper">
+                                                <i class="material-icons" style="color: #FAA916;">
+                                                    web
+                                                </i>
+                                            </div>
+                                            <div class="sm-box-title col-md-10 col-10">
+                                                pkbooking.com
+                                            </div>
+                                        </div>
+                                        <div class="row p-4">
+                                            <span class="sm-box-num  text-center text-align">
+                                                17
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-end border-bottom hover-box">
+                                        <div class="row pt-2 pb-2">
+                                            <div class="col-md-2 col-2 icon-wrapper">
+                                                <i class="material-icons" style="color: #FAA916;">
+                                                    more_horiz
+                                                </i>
+                                            </div>
+                                            <div class="sm-box-title col-md-10 col-10">
+                                                Others
+                                            </div>
+                                        </div>
+                                        <div class="row p-4">
+                                            <span class=" sm-box-num text-center text-align">
+                                                17
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3 col-sm-6 border-bottom hover-box">
+                                        <div class="row pt-2 pb-2">
+                                            <div class="col-md-2 col-2 icon-wrapper">
+                                                <i class="material-icons" style="color: #FAA916;">
+                                                    attach_money
+                                                </i>
+                                            </div>
+                                            <div class="sm-box-title col-md-10 col-10">
+                                                Revenue
+                                            </div>
+                                        </div>
+                                        <div class="row p-4">
+                                            <span class=" sm-box-num text-center text-align">
+                                                38
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row row-cols-1 row-cols-md-1 row-cols-lg-2 row-cols-xl-2 g-4 text-center">
+                            <div class="col">
+                                <div class="card border-0 shadow rounded-3" style=" height:400px;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Latest 10 Reservations</h5>
+                                        <div class="table-responsive table1 pt-2 "  style="max-height: 300px; overflow-y: auto;">
+                                            <table class="table table-hover" id="payment-table">
+                                                <thead>
+                                                    <tr>
+                                                        <th scope="col">SR#</th>
+                                                        <th scope="col">GENDER</th>
+                                                        <th scope="col">GUEST NAME</th>
+                                                        <th scope="col">CONTACT</th>
+                                                        <th scope="col">AGENCY</th>
+                                                        <th scope="col">SOURCE</th>
+                                                        <th scope="col">ARRIVAL</th>
+
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>1</td>
+                                                        <td>Male</td>
+                                                        <td>Ali Khan</td>
+                                                        <td>0300 1234567</td>
+                                                        <td>Trivelles</td>
+                                                        <td>Online</td>
+                                                        <td>2024-08-01</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>2</td>
+                                                        <td>Female</td>
+                                                        <td>Fatima Ali</td>
+                                                        <td>0301 2345678</td>
+                                                        <td>Serena</td>
+                                                        <td>Walk-in</td>
+                                                        <td>2024-08-05</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>3</td>
+                                                        <td>Male</td>
+                                                        <td>Ahmed Raza</td>
+                                                        <td>0302 3456789</td>
+                                                        <td>Marriott</td>
+                                                        <td>Online</td>
+                                                        <td>2024-08-10</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>4</td>
+                                                        <td>Female</td>
+                                                        <td>Ayesha Khan</td>
+                                                        <td>0303 4567890</td>
+                                                        <td>PC</td>
+                                                        <td>Walk-in</td>
+                                                        <td>2024-08-15</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>5</td>
+                                                        <td>Male</td>
+                                                        <td>Usman Khan</td>
+                                                        <td>0304 5678901</td>
+                                                        <td>Avari</td>
+                                                        <td>Online</td>
+                                                        <td>2024-08-20</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>6</td>
+                                                        <td>Female</td>
+                                                        <td>Sara Ali</td>
+                                                        <td>0305 6789012</td>
+                                                        <td>Hotel One</td>
+                                                        <td>Walk-in</td>
+                                                        <td>2024-08-25</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>7</td>
+                                                        <td>Male</td>
+                                                        <td>Bilal Hashim</td>
+                                                        <td>0306 7890123</td>
+                                                        <td>Hotel One</td>
+                                                        <td>Online</td>
+                                                        <td>2024-08-30</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>8</td>
+                                                        <td>Female</td>
+                                                        <td>Maira Khan</td>
+                                                        <td>0307 8901234</td>
+                                                        <td>Hotel One</td>
+                                                        <td>Walk-in</td>
+                                                        <td>2024-09-02</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>9</td>
+                                                        <td>Male</td>
+                                                        <td>Hassan Ali</td>
+                                                        <td>0308 9012345</td>
+                                                        <td>Marriott</td>
+                                                        <td>Online</td>
+                                                        <td>2024-09-07</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>10</td>
+                                                        <td>Female</td>
+                                                        <td>Amna Abid</td>
+                                                        <td>0309 0123456</td>
+                                                        <td>Serena</td>
+                                                        <td>Walk-in</td>
+                                                        <td>2024-09-10</td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col">
+                                <div class="card border-0 shadow rounded-3" style=" height:400px;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Bookings</h5>
+                                        <div class="chart-container">
+                                            <canvas id="bookingsChart"></canvas>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card border-0 shadow rounded-3" style=" height:400px;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Reservation Details</h5>
+                                        <canvas id="multiBarChart"></canvas>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card border-0 shadow rounded-3" style=" height:400px;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">My Tasks</h5>
+                                        <button
+                                            style="background-color: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; padding: 6px 16px; font-size: 14px; cursor: default;">No
+                                            failed payments in last 24 Hours</button>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card border-0 shadow rounded-3" style=" height:400px;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Failed Payments (Last 24 Hours)</h5>
+                                        <button
+                                            style="background-color: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; padding: 6px 16px; font-size: 14px; cursor: default;">No
+                                            failed payments in last 24 Hours</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card border-0 shadow rounded-3" style=" height:400px;">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Pay by Pay Link Payment</h5>
+                                        <button
+                                            style="background-color: #f0f0f0; border: 1px solid #ccc; border-radius: 4px; padding: 6px 16px; font-size: 14px; cursor: default;">Currently
+                                            no Pay by Link available</button>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                     </div>
                     <div class="tab-pane fade" id="room" role="tabpanel" aria-labelledby="room_tab">
                         <div class="container-fluid p-3 mb-4 shadow-bottom bg-white rounded-bottom">
@@ -827,7 +1223,8 @@
                                                 GST/VAT Tax
                                                 <button type="button" class="btn btn-link p-0 text-decoration-none"
                                                     data-bs-toggle="modal" data-bs-target="#editTaxModal"
-                                                    data-tax-target="gst-vat" style="margin-left: auto; color: red;" title="Edit GST/VAT tax">
+                                                    data-tax-target="gst-vat" style="margin-left: auto; color: red;"
+                                                    title="Edit GST/VAT tax">
                                                     <i class="material-icons">edit</i>
                                                 </button>
                                             </div>
@@ -869,23 +1266,38 @@
                         </div>
                         <div class="dashboard-container">
                             <div class="card-container card line-chart">
-                                <h2>Average Room Rate</h2>
+                                <h5 style=" margin-top: 10px; margin-bottom: 20px;">Average Room Rate</h5>
                                 <canvas id="lineChart"></canvas>
                             </div>
+
                             <div class="card-container card pie-chart">
-                                <h2>Occupancy rate</h2>
+                                <h5 style=" margin-top: 10px; margin-bottom: 20px;">Occupancy rate</h5>
                                 <canvas id="pieChart"></canvas>
                             </div>
+
                             <div class="card-container card controls">
-                                <h2>Average Room Rate</h2>
-                                <h1>$40</h1>
-                                <label><input type="checkbox"> Show Revenue Including VAT</label><br>
-                                <label><input type="checkbox"> Exclude Non-Accommodation Revenue</label>
-                                <p>Occupancy: 0.00%</p>
-                                <p>RevPAR: £0.00</p>
+                                <h5 style=" margin-top: 10px; margin-bottom: 20px;">Average Room Rate</h5>
+                                <div class="rate-display">
+                                    <span class="currency-symbol">$</span>
+                                    <input type="number" value="40" min="0" id="room-rate" class="rate-input" />
+                                    <!-- Simple input without any extra styling -->
+                                </div>
+                                <div class="checkbox-container">
+                                    <label><input type="checkbox"> Show Revenue Including VAT</label>
+                                    <label><input type="checkbox"> Exclude Non-Accommodation Revenue</label>
+                                </div>
+                                <div class="stats">
+                                    <p>Occupancy: 0.00%</p>
+                                    <p>RevPAR: £0.00</p>
+                                </div>
+                                <div class="button-container">
+                                    <button class="status-button">Change Status</button>
+                                    <button class="rate-button" id="changeRateBtn">Change Rate</button>
+                                </div>
                             </div>
+
                             <div class="card-container card property-list">
-                                <h2>Registered Child Properties</h2>
+                                <h5 style=" margin-top: 10px; margin-bottom: 20px;">Registered Child Properties</h5>
 
                                 <div class="table-format table-responsive">
                                     <table>
@@ -905,32 +1317,33 @@
                                                 <td>Abc</td>
                                                 <td>123456788</td>
                                                 <td>03/4/2023</td>
-                                                <td class="status-expired">01/03/2024</td>
-                                                <td><span class="status-badge status-expired">Change status</span></td>
+                                                <td>01/03/2024</td>
+                                                <td><span class="status-badge expired">Expired</span></td>
                                             </tr>
                                             <tr>
                                                 <td>The Second Home</td>
                                                 <td>Abc</td>
                                                 <td>126763726</td>
                                                 <td>05/08/2023</td>
-                                                <td class="status-active">09/06/2025</td>
-                                                <td><span class="status-badge status-active">Change status</span></td>
+                                                <td>09/06/2025</td>
+                                                <td><span class="status-badge active">Active</span></td>
                                             </tr>
                                             <tr>
                                                 <td>abc</td>
                                                 <td>abc</td>
                                                 <td>1323123</td>
                                                 <td>02/04/2022</td>
-                                                <td class="status-soon-expiring">04/04/2026</td>
-                                                <td><span class="status-badge status-soon-expiring">Change status</span>
-                                                </td>
+                                                <td>04/04/2026</td>
+                                                <td><span class="status-badge soon-expiring">Soon Expiring</span></td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
+
+
                             <div class="card-container card demand-list">
-                                <h2>Demands</h2>
+                                <h5 style=" margin-top: 10px; margin-bottom: 20px;">Demands</h5>
                                 <div class="table-responsive">
                                     <table>
                                         <thead>
@@ -947,7 +1360,13 @@
                                                     <span class="description">2 bed in first floor</span>
                                                 </td>
                                                 <td>2024-08-06</td>
-                                                <td><span class="status-badge status-processing">Processing</span></td>
+                                                <td>
+                                                    <select class="status-select">
+                                                        <option value="processing" selected>Processing</option>
+                                                        <option value="completed">Completed</option>
+                                                        <option value="pending">Pending</option>
+                                                    </select>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>
@@ -955,7 +1374,13 @@
                                                     <span class="description">4 seater wooden table</span>
                                                 </td>
                                                 <td>2024-08-10</td>
-                                                <td><span class="status-badge status-completed">Completed</span></td>
+                                                <td>
+                                                    <select class="status-select">
+                                                        <option value="processing">Processing</option>
+                                                        <option value="completed" selected>Completed</option>
+                                                        <option value="pending">Pending</option>
+                                                    </select>
+                                                </td>
                                             </tr>
                                             <tr>
                                                 <td>
@@ -963,14 +1388,21 @@
                                                     <span class="description">Ergonomic office chair</span>
                                                 </td>
                                                 <td>2024-08-15</td>
-                                                <td><span class="status-badge status-pending">Pending</span></td>
+                                                <td>
+                                                    <select class="status-select">
+                                                        <option value="processing">Processing</option>
+                                                        <option value="completed">Completed</option>
+                                                        <option value="pending" selected>Pending</option>
+                                                    </select>
+                                                </td>
                                             </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
+
                             <div class="card-container card demand-list">
-                                <h2>Coming soon</h2>
+                                <h5 style=" margin-top: 10px; margin-bottom: 20px;">Coming soon</h5>
 
                             </div>
 
@@ -1039,7 +1471,7 @@
                                         </div>
                                         <div class="row p-4">
                                             <span class="text-center text-align" style="font-size: 2.5rem;">
-                                                18
+                                                0/18
                                             </span>
                                         </div>
                                     </div>
@@ -1086,13 +1518,13 @@
                         <div class="dashboard-container">
                             <!-- Staff Pie Chart -->
                             <div class="card-container card pie-chart">
-                                <h2>Staff</h2>
+                                <h5 style=" margin-top: 10px; margin-bottom: 20px;">Staff</h5>
                                 <canvas id="staffPieChart"></canvas>
                             </div>
 
                             <!-- Guest Feedback -->
                             <div class="card-container card property-list">
-                                <h2>Guest Feedback</h2>
+                                <h5 style=" margin-top: 10px; margin-bottom: 20px;">Guest Feedback</h5>
                                 <div class="table-format table-responsive">
                                     <table class="table">
                                         <thead>
@@ -1145,9 +1577,24 @@
                                     </table>
                                 </div>
                             </div>
+                            <!-- Staff Attendance Chart -->
+                            <div class="card-container card bar-chart">
+                                <h5 style=" margin-top: 10px; margin-bottom: 20px;">Staff Attendance</h5>
+                                <canvas id="staffAttendanceChart"></canvas>
+                            </div>
+
+                            <!-- Customer Satisfaction Chart -->
+                            <div class="card-container card line-chart">
+                                <h5 style=" margin-top: 10px; margin-bottom: 20px;">Customer Satisfaction</h5>
+                                <canvas id="customerSatisfactionChart"></canvas>
+                            </div>
+
+
+
                         </div>
                     </div>
                 </div>
+
             </main>
         </div>
     </div>
