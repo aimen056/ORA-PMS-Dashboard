@@ -78,33 +78,34 @@
 }
 
 /*Table formatting*/
-.pl-table table {
-    border-radius: 16px; 
-    overflow: hidden; 
+.table1 table {
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
 }
 
-.pl-table table thead th:first-child {
-    border-top-left-radius: 16px; 
-}
-
-.pl-table table thead th:last-child {
-    border-top-right-radius: 16px; 
-}
-
-.pl-table table thead th {
-    border: 1px solid #ddd; 
-    background-color: #274772; 
-    color: white;
+.table1 table thead th {
+    background-color:#274772 ;
+    color: #fff;
     font-size: 0.85rem;
+
+    padding: 10px;
 }
-.pl-table table tbody td {
-    font-size: 1rem;
+
+
+.table1 table tbody td {
+    font-size: 0.96rem;
+    padding: 10px;
+    white-space: nowrap;
+
 }
-.pl-table .inc{
+
+.table1 .inc {
     background-color: rgba(75, 199, 105, 0.25);
     color: #2caa4b;
 }
-.pl-table .dec{
+
+.table1 .dec {
     background-color: rgba(230, 57, 70, 0.25);
     color: #E63946;
 }
@@ -130,41 +131,21 @@
 
 
   /* Ruquiya CSS Start */
-  
-/* Hover effect for sidebar links */
+
+/* General Styles */
 aside a:hover, 
 .dropdown-btn:hover {
     background-color: #457B9D; 
     color: #F1FAEE; 
 }
 
-
-.dropdown-container a:hover {
-    background-color: #A8DADC; 
-    color: #0c3547; 
-}
-
-aside a .dropdown-btn, .dropdown-container a {
+aside a .dropdown-btn, 
+.dropdown-container a {
     transition: background-color 0.3s, color 0.3s;
 }
 
 #sidebar {
     transition: width 0.3s ease;
-}
-.card-container .card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    margin-bottom: 1rem;
-    text-align: center;
-    width: 100%; 
-    height: 400px; 
-    flex-grow: 1; 
-    display: flex; 
-    flex-direction: column;
-    justify-content: flex-start; 
-    border: none; 
 }
 
 .dashboard-container {
@@ -175,11 +156,28 @@ aside a .dropdown-btn, .dropdown-container a {
     margin-top: 30px;
 }
 
+.card-container, 
+.demand-list, 
 .dashboard-container .card {
-    flex-basis: calc(50% - 1.5rem); 
-    max-width: calc(50% - 1.5rem); 
-    box-sizing: border-box;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #fff;
+    box-shadow:  0 0 15px rgba(0, 0, 0, 0.2); 
     border: none; 
+    outline: none; 
+    text-align: center;
+    flex-grow: 1;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex-basis: calc(50% - 0.75rem);
+    max-width: calc(50% - 0.75rem);
+    margin-bottom: 1rem;
+}
+
+.card-container .card p {
+    font-size: 1.3rem; 
 }
 
 
@@ -187,35 +185,21 @@ aside a .dropdown-btn, .dropdown-container a {
     .dashboard-container .card {
         flex-basis: 100%;
         max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .button-container {
+        justify-content: flex-start;
     }
 }
-
-.card-container .card h2 {
-    font-size: 1.2rem;
-    color: #0D1B2A;
-    margin: 0;
-    padding-top: 20px; 
-    padding-bottom: 20px; 
-    flex-grow: 0;
-    flex-shrink: 0;
-}
-
-.card-container .card p {
-    font-size: 1.5rem;
-}
-
-.card-container .card:hover {
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
-
 canvas {
     width: 100% !important;
     max-width: 600px;
-    height: auto !important;
+    height: 100% !important;
 }
 
 .line-chart, .pie-chart, .controls, .property-list {
-    flex-basis: 49%;
+    flex-basis: 100%;
 }
 
 .line-chart canvas, .pie-chart canvas {
@@ -224,245 +208,268 @@ canvas {
     margin: 0 auto;
 }
 
-.controls h1 {
+
+/* Rate Container */
+.rate-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.currency-symbol {
     font-size: 2rem;
     color: #f6ad55;
+    margin-right: 0.5rem;
 }
 
-.controls label {
-    display: block;
-    margin-top: 0.5rem;
+.rate-input {
+    font-size: 2rem;
+    text-align: center;
+    border: none;
+    background: transparent;
+    color: #333;
+    width: 100px;
 }
 
+.rate-input:focus {
+    outline: none;
+}
+
+/* Centering and styling the checkboxes */
+.checkbox-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.checkbox-container label {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+.button-container .status-button,
+.button-container .rate-button {
+    padding: 0.5rem 1.5rem;
+    font-size: 1rem;
+    color: white;
+    background-color: #f6ad55;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.button-container .status-button:hover,
+.button-container .rate-button:hover {
+    background-color: #dd9641;
+}
+
+/*Property list*/
 .property-list table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.property-list th, 
+.property-list td {
+    padding: 9px;
+    text-align: left;
+    vertical-align: middle;
+    border-bottom: 2px solid #f0f0f0;
+    font-size: 0.875rem;
+    transition: background-color 0.3s ease;
+}
+
+.property-list th {
+    background-color: #274772;
+    color: #fff;
+}
+
+.property-list tbody tr:hover {
+    background-color: #f5f5f5; 
+}
+
+/* Status Select */
+.status-select ,.status-badge {
+    display: inline-block;
+    padding: 5px 0;
+    font-size: 0.875rem;
+    font-weight: bold;
+    border-radius: 8px;
+    color: white;
+    text-align: center;
+    border: none;
+    appearance: none;
+    width: 100px;
+    background-color: #f6ad55;
+    outline: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.status-select option {
+    color: white;
+}
+
+.status-select option[value="expired"], .status-badge.expired {
+    background-color: #f56565;
+}
+
+.status-select option[value="active"],.status-badge.active {
+    background-color: #48bb78;
+}
+
+.status-select option[value="soon-expiring"],.status-badge.soon-expiring {
+    background-color: #f6ad55;
+}
+
+/* Modal Styles */
+.modal-title {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-right: auto;
+}
+
+.close.no-border {
+    font-size: 1.5rem;
+    color: #fff;
+    background: none;
+    border: none;
+    margin-left: 10px;
+    opacity: 0.9;
+}
+
+.close.no-border:hover {
+    opacity: 1;
+}
+
+.modal-content {
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    max-height: calc(100vh - 3.5rem);
+}
+
+.modal-dialog {
+    max-width: 500px;
+}
+
+/* Form Controls */
+.form-control {
+    border-radius: 8px;
+    border: 2px solid #ced4da;
+    font-size: 1.1rem;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.form-control:focus {
+    border-color: #274772;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.25);
+}
+
+/* Submit Button */
+.btn-primary {
+    background-color: #E63946;
+    border-color: #E63946;
+    font-size: 1.2rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #E63946;
+    border-color: #E63946;
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.btn-lg {
+    font-size: 1.25rem;
+}
+
+table tbody tr:hover {
+    background-color: #f5f5f5; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease;
+}
+
+/* Table Formatting */
+.table-format .table tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.table-format .table {
     width: 100%;
     border-collapse: collapse;
     border-radius: 12px; 
     overflow: hidden;
 }
 
-.property-list th, .property-list td {
-    padding: 15px;
-    text-align: left;
-    vertical-align: middle;
-}
-
-.property-list th {
-    background-color: #0c3547;
-    color: #fff;
-}
-
-.property-list td.status-expired {
-    color: #f56565;
-}
-
-.property-list td.status-active {
-    color: #48bb78;
-}
-
-.property-list td.status-soon-expiring {
-    color: #f6ad55;
-}
-
-.property-list .status-badge {
-    cursor: pointer;
-    padding: 0.25rem 0.5rem; 
-    border-radius: 12px; 
-    text-align: center;
-    font-size: 1rem; 
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-    display: inline-block;
-    white-space: nowrap;
-    min-width: 100px; 
-}
-
-.property-list .status-badge:hover {
-    transform: scale(1.05); 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
-}
-
-.property-list .status-badge:active {
-    transform: scale(0.95);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
-}
-
-.property-list .status-badge.status-expired {
-    background-color: #f56565;
-    color: #fff;
-}
-
-.property-list .status-badge.status-active {
-    background-color: #38A169;
-    color: #fff;
-}
-
-.property-list .status-badge.status-soon-expiring {
-    background-color: #f6ad55;
-    color: #fff;
-}
-
-  /* Modal Header */
-  .bg-gradient-primary {
-      background: linear-gradient(90deg, #274772, #0056b3);
-      border-bottom: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  }
-  
-  .modal-title {
-      font-size: 1.75rem;
-      font-weight: 600;
-      margin-right: auto;
-  }
-  
-  .close.no-border {
-      font-size: 1.5rem;
-      color: #fff;
-      background: none;
-      border: none;
-      margin-left: 10px; /* Adds space between text and the close button */
-      opacity: 0.9;
-  }
-  
-  .close.no-border:hover {
-      opacity: 1;
-  }
-  
-  /* Modal Content */
-  .modal-content {
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
-  }
-  
-  /* Form Controls */
-  .form-control {
-      border-radius: 8px;
-      border: 2px solid #ced4da;
-      box-shadow: none;
-      font-size: 1.1rem;
-      transition: border-color 0.3s ease-in-out;
-  }
-  
-  .form-control:focus {
-      border-color: #0c3547;
-      box-shadow: 0 0 10px rgba(0, 123, 255, 0.25);
-  }
-  
-  /* Submit Button */
-  .btn-primary {
-      background-color: #E63946;
-      border-color: #E63946;
-      font-size: 1.2rem;
-      padding: 0.75rem;
-      border-radius: 8px;
-      transition: background-color 0.3s ease-in-out, border-color 0.3s ease-in-out;
-  }
-  
-  .btn-primary:hover {
-      background-color: #E63946;
-      border-color: #E63946;
-  }
-  
-  .btn-block {
-      display: block;
-      width: 100%;
-  }
-  
-  .btn-lg {
-      font-size: 1.25rem;
-  }
-  
-  /* Modal Dialog */
-  .modal-dialog-centered {
-      display: flex;
-      align-items: center;
-      max-height: calc(100vh - 3.5rem);
-      
-  
-  }
-  
-  .modal-dialog {
-      max-width: 500px;
-  }
-
-
-.table-format.table-responsive {
-    overflow-x: auto;
-
-}
-
 .table-format .table th, 
 .table-format .table td {
-    padding: 15px;
+    padding: 12px;
     text-align: left;
     vertical-align: middle;
+    font-size: 0.875rem;
+    transition: background-color 0.3s ease;
 }
 
 .table-format .table thead th {
-    background-color: #0c3547; 
-    color: #ffffff;
+    background-color: #274772;
+    color: #fff;
     font-weight: bold;
 }
 
-
 .table-format .table tbody tr {
-    background-color: #ffffff;
+    background-color: #fff;
     border-bottom: 2px solid #f0f0f0;
 }
 
 .table-format .table tbody td {
     font-size: 14px;
-    color: #333333;
+    color: #333;
 }
 
-/* Star styling */
+/* Star Styling */
 .stars {
     font-size: 18px;
-    color: #FFD700; /* Gold color for the stars */
+    color: #FFD700;
     letter-spacing: 2px;
 }
 
 .stars.four-stars {
-    color: #FF8C00; /* Orange for 4 stars */
+    color: #FF8C00;
 }
 
 .stars.five-stars {
-    color: #48bb78; /* LimeGreen for 5 stars */
+    color: #48bb78;
 }
+
 .stars.three-stars {
-    color: #f56565; /* LimeGreen for 5 stars */
-}
-.dashboard-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
+    color: #f56565;
 }
 
- .card-container, .demand-list {
-    padding: 20px;
-    border-radius: 12px;
-    background-color: #fff;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    flex-grow: 1;
-    height: 400px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    flex-basis: calc(50% - 1.5rem); 
-    max-width: calc(50% - 1.5rem);  
-    box-sizing: border-box;
-    margin-bottom: 1rem; 
-}
-
-.demand-list .table-responsive {
-    overflow-x: auto;
-    flex-grow: 1;
-}
-
+/* Demand List */
 .demand-list table {
     width: 100%;
     border-collapse: collapse;
@@ -470,13 +477,16 @@ canvas {
     overflow: hidden;
 }
 
-.demand-list th, .demand-list td {
+.demand-list th, 
+.demand-list td {
     padding: 0.75rem;
     text-align: left;
+    border-bottom: 2px solid #f0f0f0;
+    transition: background-color 0.3s ease;
 }
 
 .demand-list th {
-    background-color: #0c3547;
+    background-color: #274772;
     color: #fff;
     text-transform: uppercase;
     font-size: 0.875rem;
@@ -485,32 +495,6 @@ canvas {
 .demand-list td {
     font-size: 0.875rem;
 }
-
-.demand-list .description {
-    font-size: 0.75rem;
-    color: #888;
-}
-
-.demand-list .status-badge {
-    padding: 0.25rem 0.5rem;
-    border-radius: 8px;
-    font-size: 0.875rem;
-    text-align: center;
-    font-weight: bold;
-    color: #fff;
-}
-
-.demand-list .status-processing {
-    background-color: #f6ad55;
-}
-
-.demand-list .status-completed {
-    background-color: #48bb78;
-}
-
-.demand-list .status-pending {
-    background-color: #f56565;
-}
+/* Ruquiya CSS End */
 
 
-  /* Ruquiya CSS End */
