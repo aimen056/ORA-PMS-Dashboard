@@ -110,6 +110,10 @@
     color: #E63946;
 }
 
+.table .pending{
+    background-color: rgba(246, 173, 85, 0.25);
+    color:  #d6831e;
+}
 
 /*viewmore button*/
 .view_more_btn{

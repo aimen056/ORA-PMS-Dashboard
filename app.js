@@ -515,76 +515,163 @@ function updateSelectBackground(selectElement) {
 
     //maleeha js
     
-    const ctxBookings = document.getElementById('bookingsChart').getContext('2d');
+    var ctxBookings = document.getElementById('bookingsChart').getContext('2d');
 
-    // Predefined dataset
-    const pmsData = [8, 3, 4, 6, 5, 2];
-    const bookingEngineData = [5, 6, 2, 7, 4, 3];
-
-    const labels = ['January', 'February', 'March', 'April', 'May', 'June'];
-
-    const data = {
-      labels: labels,
-      datasets: [
-        {
-          label: 'PMS',
-          data: pmsData,
-          backgroundColor: '#E63946',
-          borderRadius: 8, 
-          hoverBackgroundColor: '#C8102E', 
-
-          stack: 'Stack 0',
-        },
-        {
-          label: 'Booking Engine',
-          data: bookingEngineData,
-          backgroundColor: '#f6ad55',
-          borderRadius: 8, 
-          hoverBackgroundColor: '#F59E0B', 
-          stack: 'Stack 0',
+var bookingsChart = new Chart(ctxBookings, {
+  type: 'bar',
+  data: {
+    labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+    datasets: [
+      {
+        label: 'PMS',
+        data: [8, 3, 4, 6, 5, 2],
+        backgroundColor: '#E63946',
+        borderRadius: 8, 
+        hoverBackgroundColor: '#C8102E', 
+        stack: 'Stack 0',
+      },
+      {
+        label: 'Booking Engine',
+        data: [5, 6, 2, 7, 4, 3],
+        backgroundColor: '#f6ad55',
+        borderRadius: 8, 
+        hoverBackgroundColor: '#F59E0B', 
+        stack: 'Stack 0',
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      x: {
+        stacked: true,
+        title: {
+          display: true,
+          text: 'Months'
         }
-      ]
-    };
-
-    const config = {
-      type: 'bar',
-      data: data,
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        scales: {
-          x: {
-            stacked: true,
-            title: {
-              display: true,
-              text: 'Months'
-            }
-          },
-          y: {
-            stacked: true,
-            beginAtZero: true,
-            max: 16,
-            title: {
-              display: true,
-              text: 'Bookings'
-            }
-          }
-        },
-        elements: {
-          bar: {
-            borderRadius: 8, 
-          }
+      },
+      y: {
+        stacked: true,
+        beginAtZero: true,
+        max: 16,
+        title: {
+          display: true,
+          text: 'Bookings'
         }
       }
-    };
-
-    new Chart(ctxBookings, config);
+    },
+    elements: {
+      bar: {
+        borderRadius: 8, 
+      }
+    }
+  }
+});
 
 
 
 
     //multichart reservations
+    // Reservation Check-In/Check-Out Chart
+    var ctxAttendance = document.getElementById('multiBarChart').getContext('2d');
+    var staffAttendanceChart = new Chart(ctxAttendance, {
+        type: 'bar',
+        data: {
+            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+            datasets: [
+                {
+                    label: 'Reservation',
+                    data: [25, 30, 28, 35, 40, , 20, 20, 10, 30, 45, 40], 
+                    backgroundColor: '#48bb78',
+                    borderWidth: 0
+                },
+                {
+                    label: 'Check-In',
+                    data: [15, 20, 18, 25, 30, 35, 40, 10, 20, 40, 35, 30], 
+                    backgroundColor: '#E63946',
+                    borderWidth: 0
+                },
+                {
+                    label: 'Cancel',
+                    data: [5, 8, 7, 6, 10, 12, 15, 18, 20, 15, 10, 8], 
+                    backgroundColor: '#f6ad55',
+                    borderWidth: 0
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            scales: {
+                x: {
+                    ticks: {
+                        autoSkip: false,
+                        
+                    },
+                    grid: {
+                        display: false // Hides grid lines on the x-axis
+                    }
+                },
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        stepSize: 10
+                    },
+                    grid: {
+                        borderColor: 'rgba(0, 0, 0, 0.1)', // Lighter grid line color
+                        borderWidth: 1, // Thinner grid lines
+                        lineWidth: 1, // Adjust line width if needed
+                        color: 'rgba(0, 0, 0, 0.1)' // Lighter grid line color
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    position: 'top'
+                }
+            }
+        }
+    });
+    
+    //PAY BY LINK HIGHLIGHTS
+     const txnStatusCells = document.querySelectorAll('#pay-link-table td:nth-child(5)');
+     const taskCells = document.querySelectorAll('#taskTable td:nth-child(3)');
+     const resCells = document.querySelectorAll('#reservation-table td:nth-child(5)');
 
-    
-    
+      function applyClassToCells(cells, keywordClassMap) {
+         cells.forEach(cell => {
+             const text = cell.textContent.trim();
+             const classToAdd = keywordClassMap[text];
+             if (classToAdd) {
+                 cell.classList.add(classToAdd);
+             }
+         });
+     }
+      const taskClassMap = {
+        'Completed': 'inc',
+        'In Progress': 'pending', 
+        'Not Started': 'dec'
+    };
+     const txnStatusClassMap = {
+        'Successful': 'inc',
+        'Pending': 'pending', 
+        'Failed': 'dec'
+    };
+
+    const resClassMap = {
+        'Walk-in': 'inc',
+        'Online': 'dec'
+    };
+   
+      applyClassToCells(taskCells, taskClassMap);
+     applyClassToCells(txnStatusCells, txnStatusClassMap);
+     applyClassToCells(resCells, resClassMap);
+
+
+
+
+
+
+
+
 });
