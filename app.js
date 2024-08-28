@@ -573,7 +573,6 @@ var bookingsChart = new Chart(ctxBookings, {
 
 
     //multichart reservations
-    // Reservation Check-In/Check-Out Chart
     var ctxAttendance = document.getElementById('multiBarChart').getContext('2d');
     var staffAttendanceChart = new Chart(ctxAttendance, {
         type: 'bar',
@@ -602,11 +601,11 @@ var bookingsChart = new Chart(ctxBookings, {
         },
         options: {
             responsive: true,
+            maintainAspectRatio:false,
             scales: {
                 x: {
                     ticks: {
-                        autoSkip: false,
-                        
+                        autoSkip: false
                     },
                     grid: {
                         display: false // Hides grid lines on the x-axis
@@ -627,7 +626,12 @@ var bookingsChart = new Chart(ctxBookings, {
             },
             plugins: {
                 legend: {
-                    position: 'top'
+                    position: 'top',
+                    labels: {
+                        font: {
+                            size: 12 // Set the legend font size here, if needed
+                        }
+                    }
                 }
             }
         }

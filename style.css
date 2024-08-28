@@ -66,21 +66,22 @@
 
 /*REVENUE AND EXPENSE GRAPH*/
 .chart-container {
-    position: relative;
+position: relative;
+        margin: auto;
+
     height: 40vh;
     width: 35vw;
-    margin: auto;
 }
 @media (max-width: 1199px) {
     .chart-container {
-        width: 90%; 
+        width: 100%; 
     }
 }
 
 /*Table formatting*/
 .table1 table {
-    border-radius: 16px;
     overflow: hidden;
+    border-radius: 16px;
     width: 100%;
 }
 
