@@ -29,21 +29,45 @@
 }
 
 
+/*@media (max-width: 768px) {
+    .main {
+        margin-left: 60px !important; 
+    }
+
+}*/
+
+/* Default sidebar styles */
+#sidebar {
+    width: 215px;
+    z-index: 1; /* Ensure it's above the main content */
+}
+
+/* Collapse sidebar on smaller viewports */
 @media (max-width: 768px) {
-    .main {
-        margin-left: 0 !important; 
-    }
-
     #sidebar {
-        width: 100%; 
+        width: 60px;
+        position: fixed; /* Ensure it's fixed in place */
+        z-index: 1000; /* Higher z-index to overlay the content */
+        top: 0;
+        left: 0;
+    }
+    #sidebarLogo, #sidebar-title, .sidebar-text {
+        display: none;
     }
 }
 
-@media (min-width: 769px) {
-    .main {
-        margin-left: 280px; 
-    }
+/* When the sidebar is expanded on small viewports */
+#sidebar.expanded {
+    width: 215px;
+    z-index: 1000; /* Ensure it's above the main content */
 }
+
+
+#main-content {
+    transition: margin-left 0.3s; /* Smooth transition for margin */
+}
+
+
 
 
 /*Cuurency sign*/
@@ -149,9 +173,9 @@ aside a .dropdown-btn,
     transition: background-color 0.3s, color 0.3s;
 }
 
-#sidebar {
+/*#sidebar {
     transition: width 0.3s ease;
-}
+}*/
 
 .dashboard-container {
     display: flex;
