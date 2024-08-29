@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
    // Dropdown toggle functionality
-    // Dropdown toggle functionality
+   
 var dropdowns = document.getElementsByClassName("dropdown-btn");
 for (var i = 0; i < dropdowns.length; i++) {
     dropdowns[i].addEventListener("click", function () {
@@ -39,7 +39,7 @@ document.getElementById('sidebarToggleBtn').addEventListener('click', function (
     document.getElementById('main-content').style.marginLeft = isCollapsed ? '215px' : '60px';
 });
 
-// Handle automatic collapse on window resize
+//  window resize
 function handleResize() {
     const isSmallViewport = window.matchMedia('(max-width: 768px)').matches;
     const sidebar = document.getElementById('sidebar');
@@ -54,7 +54,7 @@ function handleResize() {
 }
 
 window.addEventListener('resize', handleResize);
-handleResize(); // Initial check
+handleResize();
 
 
     
