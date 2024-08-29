@@ -1,21 +1,31 @@
 document.addEventListener("DOMContentLoaded", function () {
+   // Dropdown toggle functionality
     // Dropdown toggle functionality
-    var dropdowns = document.getElementsByClassName("dropdown-btn");
+var dropdowns = document.getElementsByClassName("dropdown-btn");
 for (var i = 0; i < dropdowns.length; i++) {
     dropdowns[i].addEventListener("click", function () {
+        // Ensure sidebar is expanded when dropdown is clicked
+        const sidebar = document.getElementById('sidebar');
+        if (sidebar.style.width === '60px') {
+            sidebar.style.width = '215px';
+            sidebar.querySelector('#sidebarLogo').style.display = 'inline-block';
+            sidebar.querySelector('#sidebar-title').style.display = 'inline';
+            sidebar.querySelectorAll('.sidebar-text').forEach(text => text.style.display = 'inline');
+            document.getElementById('sidebarToggleIcon').textContent = 'chevron_left';
+            document.getElementById('main-content').style.marginLeft = '215px';
+        }
+
+        // Toggle dropdown content visibility
         this.classList.toggle("active");
-        
-        // Use nextElementSibling to select the dropdown-container
         var dropdownContent = this.nextElementSibling;
-        
+
         if (dropdownContent && dropdownContent.classList.contains("dropdown-container")) {
             dropdownContent.style.display = dropdownContent.style.display === "block" ? "none" : "block";
         }
     });
 }
 
-
-    //toggle sidebar
+//toggle sidebar
 document.getElementById('sidebarToggleBtn').addEventListener('click', function () {
     const sidebar = document.getElementById('sidebar');
     const isCollapsed = sidebar.style.width === '60px';
@@ -45,7 +55,6 @@ function handleResize() {
 
 window.addEventListener('resize', handleResize);
 handleResize(); // Initial check
-
 
 
     
@@ -474,28 +483,26 @@ function updateSelectBackground(selectElement) {
 }  
     
 
-    
-    // Modal for editing tax rate
-    var taxType;
-    $('#editTaxModal').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget);
-        taxType = button.data('tax-target');
-        $('#taxTypeInput').val(taxType);
-        $('#taxRateInput').val('');
-    });
+  // Modal for editing tax rate
+  var taxType;
+  $('#editTaxModal').on('show.bs.modal', function (event) {
+      var button = $(event.relatedTarget);
+      taxType = button.data('tax-target');
+      $('#taxTypeInput').val(taxType);
+      $('#taxRateInput').val('');
+  });
 
-    $('#saveTaxRate').on('click', function () {
-        var newRate = $('#taxRateInput').val();
-        var taxType = $('#taxTypeInput').val();
+  $('#saveTaxRate').on('click', function () {
+      var newRate = $('#taxRateInput').val();
+      var taxType = $('#taxTypeInput').val();
 
-        if (newRate !== "") {
-            $('.' + taxType.replace(/ /g, '-')).text(newRate + '%');
-            $('#editTaxModal').modal('hide');
-        } else {
-            alert('Please enter a valid tax rate.');
-        }
-    });
-
+      if (newRate !== "") {
+          $('.' + taxType.replace(/ /g, '-')).text(newRate + '%');
+          $('#editTaxModal').modal('hide');
+      } else {
+          alert('Please enter a valid tax rate.');
+      }
+  });
 
     //PROFIT loss TABLE SIGNS
     const elements = document.querySelectorAll('.pl-curr');

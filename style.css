@@ -39,17 +39,12 @@
 /* Default sidebar styles */
 #sidebar {
     width: 215px;
-    z-index: 1; /* Ensure it's above the main content */
 }
 
 /* Collapse sidebar on smaller viewports */
 @media (max-width: 768px) {
     #sidebar {
         width: 60px;
-        position: fixed; /* Ensure it's fixed in place */
-        z-index: 1000; /* Higher z-index to overlay the content */
-        top: 0;
-        left: 0;
     }
     #sidebarLogo, #sidebar-title, .sidebar-text {
         display: none;
@@ -59,7 +54,6 @@
 /* When the sidebar is expanded on small viewports */
 #sidebar.expanded {
     width: 215px;
-    z-index: 1000; /* Ensure it's above the main content */
 }
 
 
@@ -170,8 +164,10 @@ aside a:hover,
 
 aside a .dropdown-btn, 
 .dropdown-container a {
+    
     transition: background-color 0.3s, color 0.3s;
 }
+
 
 /*#sidebar {
     transition: width 0.3s ease;
